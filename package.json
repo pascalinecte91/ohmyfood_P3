@@ -1,5 +1,5 @@
 {
-  "name": "ohmyfood_p2",
+  "name": "ohmyfood_p3",
   "version": "1.0.0",
   "description": "Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !",
   "main": "index.js",
@@ -8,16 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pascalinecte91/ohmyfood_P2.git"
+    "url": "git+https://github.com/pascalinecte91/ohmyfood_P3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pascalinecte91/ohmyfood_P2/issues"
+    "url": "https://github.com/pascalinecte91/ohmyfood_P3/issues"
   },
-  "homepage": "https://github.com/pascalinecte91/ohmyfood_P2#readme",
+  "homepage": "https://github.com/pascalinecte91/ohmyfood_P3#readme",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.49.9"
   }
 }
