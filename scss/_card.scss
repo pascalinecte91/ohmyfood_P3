@@ -1,0 +1,37 @@
+@import 'typo';
+
+.card-menu {
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    &__title {
+      $font-logo-title: 8rem;
+      padding-bottom: 0.2rem;
+      
+    }
+    &__figure img {
+        height: 30%;
+        width: 100%;
+        object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+    &__figure {
+      position: relative;
+      height: 100%;
+          width: 100%;
+          object-fit: cover;
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+  
+      flex-wrap: 1;
+      padding: 1rem;
+      align-items: flex-start;
+      border-radius: 0 0 20px 20px;
+    }
+  
+
+  
+  }
