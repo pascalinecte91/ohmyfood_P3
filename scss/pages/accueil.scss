@@ -1,0 +1,45 @@
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: $search-dark;
+    height: 2rem;
+    padding: 0px 10px 0px 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+    &-form {
+        border: none;
+    }
+    input {
+        border: none;
+        background-color: $search-dark;  
+    }
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: $step-one;
+    margin: 20px;
+    &-discover {
+        color: #eee;
+    }
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+}
+

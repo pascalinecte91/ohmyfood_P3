@@ -1,18 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+:root {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+/**********************************************/
+.logo__text {
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h1 h2 h3 h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+.info__btn {
+  height: 50px;
+  justify-content: center;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  margin: 1rem 1rem;
+  width: 200px;
+  background-color: #FF79DA;
+  padding: 15px 15px;
+  margin: 10px 50px 10px 50px;
+  cursor: pointer;
+}
+.info__btn-btn-text {
+  font-size: 0.8rem;
+}
+.info__btn:hover {
+  opacity: 0.8;
+}
+
+.steps__btn {
+  height: 50px;
+  justify-content: center;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  margin: 1rem 1rem;
+  width: 300px;
+  background-color: #F6F6F6;
+  padding: 15px 15px;
+  margin: 10px 50px 10px 50px;
+  cursor: pointer;
+}
+.steps__btn:hover {
+  opacity: 0.8;
+}
+.steps__btn-text {
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+.steps__btn-icon {
+  margin-left: 20px;
+}
+.steps__btn-one {
+  border-radius: 55px;
+  color: #F6F6F6;
+}
+
+.card__figure {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card__figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/**************** LOGO des Pages***************/
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #EAEAEA;
+  height: 2rem;
+  padding: 0px 10px 0px 20px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+.search-form {
+  border: none;
+}
+.search input {
+  border: none;
+  background-color: #EAEAEA;
+}
+
 .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   align-items: center;
+  background-color: #F6F6F6;
+  margin: 20px;
+}
+.info-discover {
+  color: #eee;
 }
 
 .steps {
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-
-body {
-  background-color: #7bff00;
+.steps h2 {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */

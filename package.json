@@ -4,7 +4,7 @@
   "description": "Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !",
   "main": "index.js",
   "scripts": {
-    "sass": "sass -w scss:css"
+    "sass": "sass --watch ./scss/main.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
