@@ -1,0 +1,9 @@
+.footer {
+    background-color: $black-footer;
+    &__list {
+        list-style: none;
+    }
+&__list {
+    margin-bottom: 10px;
+}
+}

@@ -1,0 +1,69 @@
+@mixin phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin big-desktop {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+/***************  FOR SIZE ************/
+
+/* FOR USE MIXINS : 
+.class { font-size :1rem; 
+    @include phone-only { font-size: 0.5rem; }
+
+***************************************/
+
+@mixin for-size($size) {
+    @if $size==phone-only {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $size==tablet-portrait {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $size==tablet-landscape-up {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $size==desktop-up {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size==big-desktop {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}

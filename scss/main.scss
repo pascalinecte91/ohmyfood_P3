@@ -1,12 +1,15 @@
 @import "./abstracts/variables";
+@import "./abstracts/mixins-media-queries";
+@import "./abstracts/mixins";
 
 @import "./base/typo";
+@import "./base/reset";
 
 @import "./components/buttons";
 @import "./components/card";
 
 @import "./layouts/header";
-@import "./layouts/_footer";
+@import "./layouts/footer";
 
 @import "./pages/accueil";
 

@@ -1,25 +1,30 @@
-
-%card {
+.card {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
+  flex-direction: column;
+  background-color: $step-one;
 
-  .card__figure  {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    @extend %card;
-    height: 170px;
-    width: 100%;
+  &__aside {
+    border-radius: 20px;
+    background: $white-color;
+
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__figure img {
+    width: 350px;
     object-fit: cover;
+
+    @include phone-only {
+      width: 100%;
+    }
   }
-  .card__figcaption {
+
+  &__figcaption {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    
+    flex-grow: 1;
+    justify-content: space-around;
   }
+
+
+}

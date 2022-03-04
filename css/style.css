@@ -1,33 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 :root {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
 }
 
-/**********************************************/
-.logo__text {
-  font-size: 4rem;
+/***************  FOR SIZE ************/
+/* FOR USE MIXINS : 
+.class { font-size :1rem; 
+    @include phone-only { font-size: 0.5rem; }
+
+***************************************/
+* {
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 2.4rem;
+body {
+  margin: 0;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body h1,
+body h2,
+body h3,
+body span,
+body main {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+@media (max-width: 599px) {
+  body h1,
+body h2,
+body h3,
+body span,
+body main {
+    font-size: 1.2rem;
+  }
 }
 
-h2 {
-  font-size: 1.8rem;
+main {
+  padding: 5px;
 }
 
-h3 {
-  font-size: 1.2rem;
-}
-
-h4 {
-  font-size: 0.8rem;
-}
-
-h1 h2 h3 h4 {
-  font-family: "Shrikhand", cursive;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .info__btn {
@@ -51,16 +73,15 @@ h1 h2 h3 h4 {
 }
 
 .steps__btn {
-  height: 50px;
   justify-content: center;
   border: 0;
   border-radius: 30px;
   padding: 1rem 3rem;
   margin: 1rem 1rem;
-  width: 300px;
+  width: 400px;
   background-color: #F6F6F6;
   padding: 15px 15px;
-  margin: 10px 50px 10px 50px;
+  position: relative;
   cursor: pointer;
 }
 .steps__btn:hover {
@@ -72,34 +93,37 @@ h1 h2 h3 h4 {
 }
 .steps__btn-icon {
   margin-left: 20px;
+  width: 40px;
+  font-size: 1.1rem;
 }
 .steps__btn-one {
   border-radius: 55px;
-  color: #F6F6F6;
 }
 
-.card__figure {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.card__figure {
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 170px;
-  width: 100%;
+  background-color: #F6F6F6;
+}
+.card__aside {
+  border-radius: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.card__figure img {
+  width: 350px;
   object-fit: cover;
 }
-
+@media (max-width: 599px) {
+  .card__figure img {
+    width: 100%;
+  }
+}
 .card__figcaption {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-grow: 1;
+  justify-content: space-around;
 }
 
 /**************** LOGO des Pages***************/
@@ -111,22 +135,39 @@ h1 h2 h3 h4 {
   height: 10vh;
   width: 100%;
 }
+.logo__text {
+  font-size: 4rem;
+  font-family: "Shrikhand", cursive;
+}
+@media (max-width: 599px) {
+  .logo__text {
+    font-size: 2.5rem;
+  }
+}
 
+.footer {
+  background-color: #353535;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list {
+  margin-bottom: 10px;
+}
+
+/*************     RECHERCHE ***********/
 .search {
   display: flex;
   justify-content: center;
-  align-items: baseline;
   background-color: #EAEAEA;
-  height: 2rem;
-  padding: 0px 10px 0px 20px;
+  height: 2.4rem;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
-.search-form {
-  border: none;
-}
-.search input {
+.search input,
+.search i {
   border: none;
   background-color: #EAEAEA;
+  height: 2rem;
 }
 
 .info {
@@ -134,23 +175,15 @@ h1 h2 h3 h4 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-bottom: 5px;
   align-items: center;
   background-color: #F6F6F6;
-  margin: 20px;
+  font-size: 2.2rem;
 }
-.info-discover {
-  color: #eee;
-}
-
-.steps {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.steps h2 {
-  display: flex;
-  justify-content: flex-start;
+@media (max-width: 599px) {
+  .info {
+    font-size: 1.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

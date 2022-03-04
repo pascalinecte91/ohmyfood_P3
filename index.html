@@ -9,49 +9,39 @@
     <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/0bfe0e9acc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-    <!---------------------------------------------------------
-                           HEADER                              
-    ---------------------------------------------------------->
+    <!----------------------     HEADER    ----------------------------->
 
     <header class="logo">
         <span class="logo__text">Ohmyfood</span>
     </header>
 
-    <!---------------------------------------------------------
-                           SEARCH                             
-    ---------------------------------------------------------->
+    <!----------------------     SEARCH     ---------------------------->
     <section class="search">
-        <i class=" fas fa-map-marker-alt "></i>
+
         <form class="search__form">
+            <i class=" fas fa-map-marker-alt "></i>
             <input type="text" value=" Paris, Belleville" placeholder="Paris, Belleville">
         </form>
 
     </section>
 
+    <!--------------------     INFORMATION    -------------------------->
 
 
-    <!---------------------------------------------------------
-                           INFORMATION                              
-    ---------------------------------------------------------->
+    <section class="info">
+        <h2 class="info__resa">Réservez le menu qui vous convient</h2>
+        <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
+        <button class="info__btn">Explorer nos restaurants</button>
+    </section>
+
+    <!--------------------       STEPS       -------------------------->
     <main>
-        <section class="info">
-            <h2 class="info__resa">Réservez le menu qui vous convient</h2>
-            <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
-            <button class="info__btn">Explorer nos restaurants</button>
-        </section>
-
-        <!--------------------------------------------------------------
-                                 STEPS                       
-    ---------------------------------------------------------------->
         <section class="steps">
-            <div class="steps">
-                <h2>Fonctionnement</h2>
-            </div>
+            <h2>Fonctionnement</h2>
             <button class="steps__btn">
                 <span class="steps__btn-one">1</span>
                 <span class="steps__btn-icon"><i class="fas fa-mobile-alt"></i></span>
@@ -69,81 +59,76 @@
             </button>
         </section>
 
-        <!------------------------------------------------------------------------
-                                     CARDS  RESTAURANTS                            
-        -------------------------------------------------------------------------->
+        <!--------------------   CARDS   --  RESTAURANT-------------->
 
-        <section class="resto">
+        <section class="card">
             <h2">Restaurants</h2>
-                <aside class="card">
-                    <a href="#" class="card__menu"></a>
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/jay-wennington.jpg" alt="la palette du gout">
-                        <figcaption class="card__figcaption">
-                            <h2 class="card__title">La palette du gout</h2>
-                            <h3 class="card__subtitle">Ménilmontant</h3>
-                            <footer class="card__footer">
-                                <i class="far fa-heart"></i>
-                            </footer>
-                        </figcaption>
-                    </figure>
-                </aside>
-                <aside class="card__aside">
-                    <a href="#" class="card__menu"></a>
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/stil.jpg" alt="la palette du gout">
-                        <figcaption class="card__figcaption">
-                            <h2 class="card__title">La palette du gout</h2>
-                            <h3 class="card__subtitle">Ménilmontant</h3>
-                            <footer class="card__footer">
-                                <i class="far fa-heart"></i>
-                            </footer>
-                        </figcaption>
-                    </figure>
-                </aside>
-                <aside class="card__aside">
-                    <a href="#" class="card__menu"></a>
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/toa-heftiba.jpg" alt="la palette du gout">
-                        <figcaption class="card__figcaption">
-                            <h2 class="card__title">La palette du gout</h2>
-                            <h3 class="card__subtitle">Ménilmontant</h3>
-                            <footer class="card__footer">
-                                <i class="far fa-heart"></i>
-                            </footer>
-                        </figcaption>
-                    </figure>
-                </aside>
-                <aside class="card__aside">
-                    <a href="#" class="card__menu"></a>
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/louis-hansel.jpg" alt="la palette du gout">
-                        <figcaption class="card__figcaption">
-                            <h2 class="card__title">La palette du gout</h2>
-                            <h3 class="card__subtitle">Ménilmontant</h3>
-                            <footer class="card__footer">
-                                <i class="far fa-heart"></i>
-                            </footer>
-                        </figcaption>
-                    </figure>
-                </aside>
+                <a href="#" class="card__menu">
+                    <aside class="card__aside">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/jay-wennington.jpg" alt="la palette du gout">
+                            <figcaption class="card__figcaption">
+                                <h2 class="card__title">La palette du gout</h2>
+                                <h3 class="card__subtitle">Ménilmontant</h3>
+                                <footer class="card__footer">
+                                    <i class="far fa-heart"></i>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </a>
+                <a href="#" class="card__menu">
+                    <aside class="card__aside">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/stil.jpg" alt="la palette du gout">
+                            <figcaption class="card__figcaption">
+                                <h2 class="card__title">La palette du gout</h2>
+                                <h3 class="card__subtitle">Ménilmontant</h3>
+                                <footer class="card__footer">
+                                    <i class="far fa-heart"></i>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </a>
+                <a href="#" class="card__menu">
+                    <aside class="card__aside">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/toa-heftiba.jpg" alt="la palette du gout">
+                            <figcaption class="card__figcaption">
+                                <h2 class="card__title">La palette du gout</h2>
+                                <h3 class="card__subtitle">Ménilmontant</h3>
+                                <footer class="card__footer">
+                                    <i class="far fa-heart"></i>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </a>
+                <a href="#" class="card__menu">
+                    <aside class="card__aside">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/louis-hansel.jpg" alt="la palette du gout">
+                            <figcaption class="card__figcaption">
+                                <h2 class="card__title">La palette du gout</h2>
+                                <h3 class="card__subtitle">Ménilmontant</h3>
+                                <footer class="card__footer">
+                                    <i class="far fa-heart"></i>
+                                </footer>
+                            </figcaption>
+                        </figure>
+                    </aside>
+                </a>
         </section>
     </main>
 
-    <!------------------------------------------------------------------------
-                                     FOOTER                           
-    ------------------------------------------------------------------------->
+    <!--------------------    FOOTER    -------------------------------->
+
     <footer>
         <h3>ohmyfood</h3>
         <div class="footer__list">
             <ul>
-                <li><i class="fas-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fas-solid fa-handshake-angle"></i>Devenir un partenaire</li>
-                <li>Mention légales</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-    </footer>
-</body>
-
-</html>
+                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li> <i class="fas fa-hands-helping"></i>Devenir un partenaire</li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:ohmyfood@emailContact.com">Contact</a</li> </ul> </div> </footer> </body> </html>

@@ -1,3 +1,5 @@
+//**** SECTION INFO *********************
+
 .info__btn {
     height: 50px;
     justify-content: center;
@@ -20,22 +22,21 @@
     }
 }
 
+//***** SECTION STEPS *******************
 
 .steps__btn {
     &:hover {
         opacity: 0.8;
     }
-
-    height: 50px;
     justify-content: center;
     border:0;
     border-radius: 30px;
     padding: 1rem 3rem;
     margin: 1rem 1rem;
-    width: 300px;
+    width: 400px;
     background-color: $step-one;
     padding: 15px 15px;
-    margin:10px 50px 10px 50px;
+    position: relative;
     cursor: pointer;
     &-text {
         font-size: 0.8rem;
@@ -43,10 +44,11 @@
     }
     &-icon {
         margin-left: 20px;
+        width: 40px;
+        font-size: 1.1rem;
     }
     &-one {
-        border-radius: 55px;
-        color: $step-one;
+        border-radius: 55px;     
     }
 
 }
