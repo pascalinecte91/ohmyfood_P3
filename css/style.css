@@ -1,19 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-:root {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-}
-
 /***************  FOR SIZE ************/
 /* FOR USE MIXINS : 
 .class { font-size :1rem; 
     @include phone-only { font-size: 0.5rem; }
 
 ***************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
+}
+
+:root {
+  padding: 5px;
+  margin: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 body {
@@ -42,14 +47,8 @@ body main {
   }
 }
 
-main {
-  padding: 5px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+a {
+  text-decoration: none;
 }
 
 .info__btn {
@@ -103,17 +102,15 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
 }
 .card__aside {
   border-radius: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
   cursor: pointer;
   margin-bottom: 10px;
 }
 .card__figure img {
-  width: 350px;
-  object-fit: cover;
+  max-width: 500px;
 }
 @media (max-width: 599px) {
   .card__figure img {
@@ -121,9 +118,8 @@ main {
   }
 }
 .card__figcaption {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /**************** LOGO des Pages***************/
@@ -145,14 +141,20 @@ main {
   }
 }
 
-.footer {
+.footer__list {
   background-color: #353535;
+  font-family: "Shrikhand", cursive;
+  color: #ffffff;
+  padding: 10px;
 }
-.footer__list {
+.footer__list .footer__details {
   list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
-.footer__list {
-  margin-bottom: 10px;
+
+li > a {
+  color: white;
 }
 
 /*************     RECHERCHE ***********/
@@ -185,5 +187,7 @@ main {
     font-size: 1.8rem;
   }
 }
+
+/************  CARD ****************/
 
 /*# sourceMappingURL=style.css.map */

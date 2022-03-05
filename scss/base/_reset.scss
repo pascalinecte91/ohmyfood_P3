@@ -1,37 +1,41 @@
 * {
-    box-sizing: border-box;
-    
+  box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-weight: 300;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+:root {
+  padding: 5px;
+  margin: 0px;
+}
 
-h1,
-h2,
-h3,
-span,
-main {
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+body {
+  margin: 0;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1,
+  h2,
+  h3,
+  span,
+  main {
     font-family: $font-text-roboto;
     font-size: 2rem;
     @include phone-only {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-}
-}
-
-main {
-    padding: 5px;
+  }
 }
 
 
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+a {
+  text-decoration: none;
 }
+
+

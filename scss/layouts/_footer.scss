@@ -1,9 +1,15 @@
-.footer {
+.footer__list  {
     background-color: $black-footer;
-    &__list {
-        list-style: none;
+    font-family: $font-title;
+    color: $white-color;
+    padding: 10px;
+    .footer__details  {
+    list-style: none;
+    text-decoration: none; 
+    font-family: $font-text-roboto;
     }
-&__list {
-    margin-bottom: 10px;
 }
+
+li > a {
+    color: white;
 }
