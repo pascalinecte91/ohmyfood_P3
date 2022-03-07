@@ -15,11 +15,11 @@
     }
 }
 
-@mixin tablet-landscape-up {
+ @mixin tablet-landscape-up {
     @media (min-width: 900px) {
         @content;
     }
-}
+} 
 
 @mixin desktop-up {
     @media (min-width: 1200px) {
@@ -72,3 +72,4 @@
         }
     }
 }
+

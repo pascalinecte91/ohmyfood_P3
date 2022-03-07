@@ -1,6 +1,12 @@
 .logo {
     display: flex;
-   
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+   i {
+       justify-content: flex-start;
+   }
         
     }
 

@@ -1,53 +1,99 @@
 * {
   box-sizing: border-box;
   font-family: $font-text-roboto;
-  
- 
 
-:root {
-  padding: 0px;
-  margin: 0px;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-body {
-  font-weight: 300;
-  min-height: 100vh;
-  h1,
-  h2,
-  span,
-  main {
-    font-size: 2rem;
-    color: black;
-    @include phone-only {
-      font-size: 1.2rem;
+
+  :root {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  body {
+    font-weight: 300;
+    min-height: 100vh;
+
+    h1,
+    h2,
+    h3,
+    span,
+    main {
+      font-size: 1.9rem;
+      color: black;
+
+      @include tablet-landscape-up {
+        font-size: 1.5rem;
+      }
+
+      @include phone-only {
+        font-size: 1rem;
+      }
     }
   }
-}
 
-li {
-list-style: none;
-text-decoration: none;
+  li {
+    list-style: none;
+    text-decoration: none;
 
-}
-a {
-  text-decoration: none;
-}
+  }
 
-figure {
-  padding: 0px;
-  margin: 0px;
-}
+  a {
+    text-decoration: none;
+  }
+
+  figure {
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 ul {
   padding: 0px;
 }
- .fa-heart {
-  color:black;
-    content: "\f004";
+
+.fa-heart {
+  color: $primary-color;
+  content: "\f004";
+}
+
+.footer p {
+  margin: 0px;
+}
+
+.ohmyfood-desktop {
+  
+  @include tablet-landscape-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+    padding-top: 10px;
+  }
+}
+
+.ohmyfood-one {
+ 
+  @include tablet-landscape-up {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    gap: 10px;
+  }
+}
+
+
+main {
+  @include tablet-landscape-up {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-grow: 1;
+
+  }
 }

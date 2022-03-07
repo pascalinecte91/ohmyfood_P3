@@ -16,7 +16,7 @@
     <!----------------------     HEADER    ----------------------------->
 
     <header class="logo">
-        <span class="logo__text">Ohmyfood</span>
+        <h1 class="logo__text">Ohmyfood</h1>
     </header>
 
     <!----------------------     SEARCH     ---------------------------->
@@ -28,8 +28,9 @@
     </section>
 
     <!--------------------     INFORMATION    -------------------------->
-
-
+    <main>
+        
+    <div class="ohmyfood-desktop">
     <section class="info">
         <h2 class="info__resa">Réservez le menu qui vous convient</h2>
         <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
@@ -37,7 +38,7 @@
     </section>
 
     <!--------------------       STEPS       -------------------------->
-    <main>
+  
         <section class="steps">
             <h2>Fonctionnement</h2>
             <button class="btn-list">
@@ -52,15 +53,15 @@
             </button>
             <button class="btn-list">
                 <span class="btn-list__item btn-list__item--number">3</span>
-                <span class="btn-list__item btn-list__item--icon"><i class="fas fa-solid fa-store"></i></span>
+                <span class="btn-list__item btn-list__item--purple"><i class="fas fa-solid fa-store"></i></span>
                 <span class="btn-list__item btn-list__item--text">Dégustez au restaurant</span>
             </button>
         </section>
-
+    </div>
         <!--------------------   CARDS   --  RESTAURANT-------------->
-
+<div class="ohmyfood-one">
         <section class="card">
-            <h2>Restaurants</h2>
+            <h2 class="card__desktop">Restaurants</h2>
             <a href="#" class="card__menu">
                 <figure class="card__figure">
                     <img src="./assets/pictures/la_palette_du_gout_jay-wennington.jpg" alt="la palette du gout">
@@ -106,15 +107,15 @@
                 </figure>
             </a>
         </section>
-    </main>
-
+</div>
+</main>
     <!--------------------    FOOTER    -------------------------------->
 
     <footer class="footer">
         <p class="footer__title">ohmyfood</p>
         <ul class="footer__list">
-            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i> Devenir un partenaire</li>
+            <li><i class="fas fa-utensils footer__list--ustensil"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping footer__list--helping"></i>Devenir un partenaire</li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
         </ul>

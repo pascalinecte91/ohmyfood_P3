@@ -2,15 +2,16 @@
 
 .btn {
   &__info {
-    height: 50px;
-    max-width: 250px;
+    height: 47px;
     justify-content: center;
+    box-shadow: 0px 5px 8px #cccccc;
+    background: linear-gradient(to top, #9356dc, #ff79da);
+    font-weight: 500;
     border: 0;
     color: white;
     border-radius: 30px;
-    background-color: $secondary-color;
     padding: 15px 15px;
-    margin: 10px 50px 10px 50px;
+    margin: 20px 50px 10px 50px;
     cursor: pointer;
 
     &:hover {
@@ -23,12 +24,20 @@
 
 .steps {
   padding: 20px;
+  h1, h2, span {
+    @include tablet-landscape-up  {
+    text-align: center;
+    }
+   
+  }
 }
 .btn-list {
-  justify-content: center;
+  display: flex;
+  align-items: baseline;
   border: none;
   border-radius: 30px;
-  padding: 0px 10px 30px 10px;
+  box-shadow: 0px 5px 8px #e6e6e6;
+  padding: 20px 0px 20px 0px;
   margin-bottom: 20px;
   background-color: $info-color;
   position: relative;
@@ -37,7 +46,7 @@
   &:hover {
     opacity: 0.8;
   }
-
+  
   @include tablet-portrait {
     display: flex;
     flex-flow: column;
@@ -52,24 +61,21 @@
   &__item--number {
     border: none;
     color: white;
-    height: 23px;
-    width: 23px;
-    display: flex;
-    justify-content: center;
+    height: 20px;
+    width: 20px;
     border-radius: 15px;
     background-color: $primary-color;
     &:hover {
       background: lighten($primary-color, 10);
     }
     position: relative;
-    left: -17px;
-    bottom: -24px;
-
+    left: -8px;
     @include tablet-portrait {
-      height: 35px;
-      width: 35px;
-      font-size: 1.5rem;
-      ;
+      height: 30px;
+      width: 30px;
+      font-size: 1.3rem;
+      bottom: -16px;
+      left:-13px;
     }
 
     @include phone-small {
@@ -78,16 +84,31 @@
   }
 
   &__item--icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding-left: 15px;
+    color: $dark-light-color;
+    &:hover i {
+      background-color: $primary-color;
+    }
     }
     @include phone-small {
       display: none;
     }
-  
 
   &__item--text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     margin-left: 20px;
+  }
+  &__item--purple {
+    color: #9356dc;
+    margin-left: 14px;
+    font-size: 1.2rem;
   }
 
 }
+.btn-list:nth-child(4) {
+  background-color: #f5edfe;
+  }
+
+

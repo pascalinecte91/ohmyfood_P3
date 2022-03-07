@@ -1,2 +1,14 @@
 
 
+/* FOR USE MIXINS :   for example
+.class { font-size :1rem; 
+    @include -------- { 
+        font-size: 0.5rem; 
+    }
+
+/***************  FOR PADDING ************/
+
+@mixin padding-footer {
+    padding: 15px 0px 7px 20px;
+}
+

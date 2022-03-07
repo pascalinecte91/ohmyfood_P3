@@ -4,6 +4,13 @@
     @include phone-only { font-size: 0.5rem; }
 
 ***************************************/
+/* FOR USE MIXINS :   for example
+.class { font-size :1rem; 
+    @include -------- { 
+        font-size: 0.5rem; 
+    }
+
+/***************  FOR PADDING ************/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
@@ -25,17 +32,28 @@
 }
 * body h1,
 * body h2,
+* body h3,
 * body span,
 * body main {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: black;
+}
+@media (min-width: 900px) {
+  * body h1,
+* body h2,
+* body h3,
+* body span,
+* body main {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 599px) {
   * body h1,
 * body h2,
+* body h3,
 * body span,
 * body main {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 * li {
@@ -55,20 +73,53 @@ ul {
 }
 
 .fa-heart {
-  color: black;
+  color: #9356dc;
   content: "\f004";
 }
 
+.footer p {
+  margin: 0px;
+}
+
+@media (min-width: 900px) {
+  .ohmyfood-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .ohmyfood-one {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-grow: 1;
+  }
+}
+
 .btn__info {
-  height: 50px;
-  max-width: 250px;
+  height: 47px;
   justify-content: center;
+  box-shadow: 0px 5px 8px #cccccc;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  font-weight: 500;
   border: 0;
   color: white;
   border-radius: 30px;
-  background-color: #FF79DA;
   padding: 15px 15px;
-  margin: 10px 50px 10px 50px;
+  margin: 20px 50px 10px 50px;
   cursor: pointer;
 }
 .btn__info:hover {
@@ -78,12 +129,19 @@ ul {
 .steps {
   padding: 20px;
 }
+@media (min-width: 900px) {
+  .steps h1, .steps h2, .steps span {
+    text-align: center;
+  }
+}
 
 .btn-list {
-  justify-content: center;
+  display: flex;
+  align-items: baseline;
   border: none;
   border-radius: 30px;
-  padding: 0px 10px 30px 10px;
+  box-shadow: 0px 5px 8px #e6e6e6;
+  padding: 20px 0px 20px 0px;
   margin-bottom: 20px;
   background-color: #F6F6F6;
   position: relative;
@@ -108,24 +166,23 @@ ul {
 .btn-list__item--number {
   border: none;
   color: white;
-  height: 23px;
-  width: 23px;
-  display: flex;
-  justify-content: center;
+  height: 20px;
+  width: 20px;
   border-radius: 15px;
   background-color: #9356dc;
   position: relative;
-  left: -17px;
-  bottom: -24px;
+  left: -8px;
 }
 .btn-list__item--number:hover {
   background: #ae80e5;
 }
 @media (min-width: 600px) {
   .btn-list__item--number {
-    height: 35px;
-    width: 35px;
-    font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
+    font-size: 1.3rem;
+    bottom: -16px;
+    left: -13px;
   }
 }
 @media (max-width: 300px) {
@@ -134,7 +191,12 @@ ul {
   }
 }
 .btn-list__item--icon {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  padding-left: 15px;
+  color: #7e7e7e;
+}
+.btn-list__item--icon:hover i {
+  background-color: #9356dc;
 }
 @media (max-width: 300px) {
   .btn-list {
@@ -142,8 +204,18 @@ ul {
   }
 }
 .btn-list__item--text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   margin-left: 20px;
+}
+.btn-list__item--purple {
+  color: #9356dc;
+  margin-left: 14px;
+  font-size: 1.2rem;
+}
+
+.btn-list:nth-child(4) {
+  background-color: #f5edfe;
 }
 
 .card {
@@ -151,11 +223,47 @@ ul {
   flex-direction: column;
   background-color: #F6F6F6;
   padding: 13px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+@media (min-width: 900px) {
+  .card {
+    margin-top: -34px;
+  }
+  .card h2 {
+    margin-top: -15px;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color: inherit;
+    margin-top: -50px;
+  }
+}
+.card__desktop h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .card__desktop h2 {
+    text-align: end;
+  }
 }
 .card__menu {
   background-color: #ffffff;
   border-radius: 20px 20px;
   margin-bottom: 20px;
+}
+@media (min-width: 900px) {
+  .card__menu {
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    text-align: inherit;
+  }
 }
 .card__figure img {
   width: 100%;
@@ -173,6 +281,12 @@ ul {
   color: black;
   font-size: 1.1rem;
   font-weight: 300;
+}
+@media (min-width: 600px) {
+  .card h3 {
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
 }
 .card__caption--heart {
   display: grid;
@@ -194,6 +308,13 @@ ul {
   grid-row-end: 2;
   grid-column-end: 3;
 }
+@media (min-width: 900px) {
+  .card {
+    width: 100%;
+    grid-template-rows: 12px 70px;
+    grid-template-columns: 80px 1fr 150px;
+  }
+}
 
 /**************** LOGO des Pages***************/
 .logo {
@@ -205,12 +326,18 @@ ul {
   width: 100%;
 }
 .logo__text {
-  font-size: 4rem;
+  font-size: 2.2rem;
   font-family: "Shrikhand", cursive;
 }
 @media (max-width: 599px) {
   .logo__text {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 900px) {
+  .logo {
+    width: 100%;
+    box-shadow: 0px 2px 3px #cccccc;
   }
 }
 
@@ -219,12 +346,18 @@ ul {
   font-family: "Shrikhand", cursive;
   color: #ffffff;
   color: white;
-  font-family: "Shrikhand", cursive;
   line-height: 27px;
+  padding: 15px 0px 7px 20px;
+}
+@media (min-width: 600px) {
+  .footer__title, .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .footer__title {
-  font-size: 1.3rem;
-  padding: 10px 0px 7px 20px;
+  font-size: 1.1rem;
 }
 .footer a {
   color: white;
@@ -233,10 +366,17 @@ ul {
   font-family: "Shrikhand", cursive;
 }
 .footer ul > li {
-  padding-left: 20px;
+  font-size: 14px;
+}
+.footer__list--ustensil {
+  padding-right: 17px;
+}
+.footer__list--helping {
+  padding-right: 10px;
 }
 
 /*************     RECHERCHE ***********/
+/************  CARD ****************/
 .search__form {
   display: flex;
   justify-content: center;
@@ -244,6 +384,12 @@ ul {
   background-color: #EAEAEA;
   height: 2.4rem;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 900px) {
+  .search__form {
+    width: 45%;
+    justify-content: space-around;
+  }
 }
 .search input {
   border: none;
@@ -256,7 +402,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 30px;
   align-items: center;
   background-color: #F6F6F6;
   font-size: 2.2rem;
@@ -267,9 +413,15 @@ ul {
   }
 }
 
-/************  CARD ****************/
 .logo {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.logo i {
+  justify-content: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */

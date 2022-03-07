@@ -1,5 +1,6 @@
 /**************** LOGO des Pages***************/
 
+
 .logo {
     display: flex;
     flex-direction: row;
@@ -9,10 +10,14 @@
     width: 100%;
 
     &__text {
-        font-size: 4rem;
+        font-size: 2.2rem;
         font-family: $font-title;
         @include phone-only {
-            font-size: 2.5rem;
+        font-size: 1.9rem;
         }
+    }
+    @include tablet-landscape-up {
+        width: 100%;
+        box-shadow: 0px 2px 3px #cccccc;
     }
 }
