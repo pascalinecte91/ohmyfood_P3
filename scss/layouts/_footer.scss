@@ -1,15 +1,26 @@
-.footer__list  {
+.footer {
     background-color: $black-footer;
     font-family: $font-title;
     color: $white-color;
-    padding: 10px;
-    .footer__details  {
-    list-style: none;
-    text-decoration: none; 
-    font-family: $font-text-roboto;
-    }
-}
-
-li > a {
     color: white;
+    font-family: $font-title;
+    line-height: 27px;
+
+    &__title {
+        font-size: 1.3rem;
+        padding: 10px 0px 7px 20px;
+    }
+
+    a {
+        color: white;
+    }
+
+    p {
+        font-family: $font-title;
+    }
+
+    ul>li {
+        padding-left: 20px;
+    }
+
 }

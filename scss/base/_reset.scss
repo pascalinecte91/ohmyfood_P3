@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
-}
+  font-family: $font-text-roboto;
+  
+ 
 
 :root {
-  padding: 5px;
+  padding: 0px;
   margin: 0px;
 }
 
@@ -13,29 +15,39 @@ img {
   object-fit: cover;
 }
 body {
-  margin: 0;
   font-weight: 300;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   h1,
   h2,
-  h3,
   span,
   main {
-    font-family: $font-text-roboto;
     font-size: 2rem;
+    color: black;
     @include phone-only {
       font-size: 1.2rem;
     }
   }
 }
 
+li {
+list-style: none;
+text-decoration: none;
 
+}
 a {
   text-decoration: none;
 }
 
+figure {
+  padding: 0px;
+  margin: 0px;
+}
+}
 
+ul {
+  padding: 0px;
+}
+ .fa-heart {
+  color:black;
+    content: "\f004";
+}

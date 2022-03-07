@@ -1,26 +1,59 @@
 .card {
   display: flex;
   flex-direction: column;
- 
+  background-color: $info-color;
+  padding: 13px;
 
-  &__aside {
-    border-radius: 20px;
+  &__menu {
     background-color: $white-color;
-    cursor: pointer;
-    margin-bottom: 10px;
-    
+    border-radius: 20px 20px;
+    margin-bottom: 20px;
   }
 
   &__figure img {
-    max-width: 500px;
- 
-    @include phone-only {
-      width: 100%;
+    width: 100%;
+    border-radius: 20px 20px;
+    object-fit: cover;
+    max-height: 230px;
+    border-radius: 20px 20px 0px 0px;
+    @include phone-small {
+      max-height: 150px; 
     }
   }
 
-  &__figcaption {
-  justify-content: space-between;
-    align-items: center;
+  h3 {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 300;
+
+
   }
+
+  &__caption--heart {
+    display: grid;
+    grid-template-rows: 12px 70px;
+    grid-template-columns: 80px 1fr 40px;
+    gap: 15px;
+    padding-left: 10px;
+    align-items: baseline;
+   
+
+    h2 {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-row-end: 1;
+      grid-column-end: 3;
+    }
+
+    h3 {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-row-end: 2;
+      grid-column-end: 3;
+    }
+    
+ 
+  }
+
+
 }

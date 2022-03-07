@@ -21,12 +21,10 @@
 
     <!----------------------     SEARCH     ---------------------------->
     <section class="search">
-
         <form class="search__form">
             <i class=" fas fa-map-marker-alt "></i>
             <input type="text" value=" Paris, Belleville" placeholder="Paris, Belleville">
         </form>
-
     </section>
 
     <!--------------------     INFORMATION    -------------------------->
@@ -35,105 +33,91 @@
     <section class="info">
         <h2 class="info__resa">Réservez le menu qui vous convient</h2>
         <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
-        <button class="info__btn">Explorer nos restaurants</button>
+        <button class="btn__info">Explorer nos restaurants</button>
     </section>
 
     <!--------------------       STEPS       -------------------------->
     <main>
         <section class="steps">
             <h2>Fonctionnement</h2>
-            <button class="steps__btn">
-                <span class="steps__btn-one">1</span>
-                <span class="steps__btn-icon"><i class="fas fa-mobile-alt"></i></span>
-                <span class="steps__btn-text">Choisissez un restaurant</span>
+            <button class="btn-list">
+                <span class="btn-list__item btn-list__item--number">1</span>
+                <span class="btn-list__item btn-list__item--icon"><i class="fas fa-mobile-alt"></i></span>
+                <span class="btn-list__item btn-list__item--text">Choisissez un restaurant</span>
             </button>
-            <button class="steps__btn">
-                <span class="steps__btn-two">2</span>
-                <span class="steps__btn-icon"><i class="fas fa-solid fa-list-ul"></i></span>
-                <span class="steps__btn-text">Composez votre menu</span>
+            <button class="btn-list">
+                <span class="btn-list__item btn-list__item--number">2</span>
+                <span class="btn-list__item btn-list__item--icon"><i class="fas fa-solid fa-list-ul"></i></span>
+                <span class="btn-list__item btn-list__item--text">Composez votre menu</span>
             </button>
-            <button class="steps__btn">
-                <span class="steps__btn-three">3</span>
-                <span class="steps__btn-icon"><i class="fas fa-solid fa-store"></i></span>
-                <span class="steps__btn-text">Dégustez au restaurant</span>
+            <button class="btn-list">
+                <span class="btn-list__item btn-list__item--number">3</span>
+                <span class="btn-list__item btn-list__item--icon"><i class="fas fa-solid fa-store"></i></span>
+                <span class="btn-list__item btn-list__item--text">Dégustez au restaurant</span>
             </button>
         </section>
 
         <!--------------------   CARDS   --  RESTAURANT-------------->
 
         <section class="card">
-            <h2">Restaurants</h2>
-                <a href="#" class="card__menu">
-                    <aside class="card__aside">
-                        <figure class="card__figure">
-                            <img src="./assets/pictures/la_palette_du_gout_jay-wennington.jpg" alt="la palette du gout">
-                            <figcaption class="card__figcaption">
-                                <h2 class="card__title">La palette du gout</h2>
-                                <h3 class="card__subtitle">Ménilmontant</h3>
-                                <footer class="card__footer">
-                                    <i class="far fa-heart"></i>
-                                </footer>
-                            </figcaption>
-                        </figure>
-                    </aside>
-                </a>
-                <a href="#" class="card__menu">
-                    <aside class="card__aside">
-                        <figure class="card__figure">
-                            <img src="./assets/pictures/la_note_enchantee_stil.jpg" alt="la palette du gout">
-                            <figcaption class="card__figcaption">
-                                <h2 class="card__title">La note enchantée</h2>
-                                <h3 class="card__subtitle">Charonne</h3>
-                                <footer class="card__footer">
-                                    <i class="far fa-heart"></i>
-                                </footer>
-                            </figcaption>
-                        </figure>
-                    </aside>
-                </a>
-                <a href="#" class="card__menu">
-                    <aside class="card__aside">
-                        <figure class="card__figure">
-                            <img src="./assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="la palette du gout">
-                            <figcaption class="card__figcaption">
-                                <h2 class="card__title">A la française</h2>
-                                <h3 class="card__subtitle">Cité Rouge</h3>
-                                <footer class="card__footer">
-                                    <i class="far fa-heart"></i>
-                                </footer>
-                            </figcaption>
-                        </figure>
-                    </aside>
-                </a>
-                <a href="#" class="card__menu">
-                    <aside class="card__aside">
-                        <figure class="card__figure">
-                            <img src="./assets/pictures/le_delice_des_sens_louis-hansel.jpg" alt="la palette du gout">
-                            <figcaption class="card__figcaption">
-                                <h2 class="card__title">Le délice des sens</h2>
-                                <h3 class="card__subtitle">Folie-Méricourt</h3>
-                                <footer class="card__footer">
-                                    <i class="far fa-heart"></i>
-                                </footer>
-                            </figcaption>
-                        </figure>
-                    </aside>
-                </a>
+            <h2>Restaurants</h2>
+            <a href="#" class="card__menu">
+                <figure class="card__figure">
+                    <img src="./assets/pictures/la_palette_du_gout_jay-wennington.jpg" alt="la palette du gout">
+                    <figcaption class="card__caption card__caption--heart">
+                        <h2>La palette du gout</h2>
+                        <h3>Ménilmontant</h3>
+                        <i class="far fa-heart card__caption card__caption--heart card__caption--empty"></i>
+                        <i class="fas fa-heart card__caption card__caption--heart card__caption--color "></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="#" class="card__menu">
+                <figure class="card__figure">
+                    <img src="./assets/pictures/la_note_enchantee_stil.jpg" alt="la palette du gout">
+                    <figcaption class="card__caption card__caption--heart">
+                        <h2>La note enchantée</h2>
+                        <h3>Charonne</h3>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="#" class="card__menu">
+                <figure class="card__figure">
+                    <img src="./assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="la palette du gout">
+                    <figcaption class="card__caption card__caption--heart">
+                        <h2>A la française</h2>
+                        <h3>Cité Rouge</h3>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="#" class="card__menu">
+                <figure class="card__figure">
+                    <img src="./assets/pictures/le_delice_des_sens_louis-hansel.jpg" alt="la palette du gout">
+                    <figcaption class="card__caption card__caption--heart">
+                        <h2>Le délice des sens</h2>
+                        <h3>Folie-Méricourt</h3>
+                        <i class="far fa-heart"></i>
+                    </figcaption>
+                </figure>
+            </a>
         </section>
     </main>
 
     <!--------------------    FOOTER    -------------------------------->
 
-    <footer class="footer__list">
-        <p>ohmyfood</p>
-            <ul class="footer__details">
-                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i> Devenir un partenaire</li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
-            </ul>
-
-      
+    <footer class="footer">
+        <p class="footer__title">ohmyfood</p>
+        <ul class="footer__list">
+            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping"></i> Devenir un partenaire</li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
+        </ul>
     </footer>
 </body>
 
