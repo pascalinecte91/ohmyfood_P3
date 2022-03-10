@@ -8,8 +8,8 @@ $dark-light-color: #7e7e7e;
 $black-footer: #353535;
 $info-color: #F6F6F6;
 $search-dark: #EAEAEA;
+$tag-font-color:#158A69;
 
+$gradient-light:linear-gradient(to top, #9356dc, #ff79da);
 
-
-
-
+$gradient-dark: linear-gradient(to top,$tag-font-color, $tertiary-color );

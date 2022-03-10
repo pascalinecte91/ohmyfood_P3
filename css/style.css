@@ -11,7 +11,9 @@
     }
 
 /***************  FOR PADDING ************/
+/****************    Font  TEXT ***********/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
+/***************     Font TITLE  *********/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
@@ -31,17 +33,13 @@
   min-height: 100vh;
 }
 * body h1,
-* body h2,
-* body h3,
 * body span,
 * body main {
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: black;
 }
 @media (min-width: 900px) {
   * body h1,
-* body h2,
-* body h3,
 * body span,
 * body main {
     font-size: 1.5rem;
@@ -49,8 +47,6 @@
 }
 @media (max-width: 599px) {
   * body h1,
-* body h2,
-* body h3,
 * body span,
 * body main {
     font-size: 1rem;
@@ -66,6 +62,10 @@
 * figure {
   padding: 0px;
   margin: 0px;
+}
+* h3, * p {
+  margin: 0;
+  color: black;
 }
 
 ul {
@@ -117,6 +117,7 @@ ul {
   font-weight: 500;
   border: 0;
   color: white;
+  font-size: 14px;
   border-radius: 30px;
   padding: 15px 15px;
   margin: 20px 50px 10px 50px;
@@ -174,7 +175,7 @@ ul {
   left: -8px;
 }
 .btn-list__item--number:hover {
-  background: #ae80e5;
+  background: linear-gradient(to top, #9356dc, #ff79da) #9356dc, 10;
 }
 @media (min-width: 600px) {
   .btn-list__item--number {
@@ -205,7 +206,7 @@ ul {
 }
 .btn-list__item--text {
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 20px;
 }
 .btn-list__item--purple {
@@ -222,9 +223,11 @@ ul {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  padding: 13px;
-  margin-left: 10px;
-  margin-top: 10px;
+  padding: 35px 13px 0px 13px;
+  margin-top: 20px;
+}
+.card h3, .card p {
+  font-size: 1.3rem;
 }
 @media (min-width: 900px) {
   .card {
@@ -243,13 +246,16 @@ ul {
     background-color: inherit;
     margin-top: -50px;
   }
+  .card h2 {
+    display: none;
+  }
 }
-.card__desktop h2 {
-  font-size: 3rem;
-  text-align: center;
+.card__desktop {
+  font-size: 1.8rem;
+  text-align: left;
 }
 @media (min-width: 900px) {
-  .card__desktop h2 {
+  .card__desktop {
     text-align: end;
   }
 }
@@ -260,16 +266,14 @@ ul {
 }
 @media (min-width: 900px) {
   .card__menu {
-    border-radius: 20px;
     background-color: #F6F6F6;
     text-align: inherit;
   }
 }
 .card__figure img {
   width: 100%;
-  border-radius: 20px 20px;
   object-fit: cover;
-  max-height: 230px;
+  max-height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
 @media (max-width: 300px) {
@@ -277,42 +281,56 @@ ul {
     max-height: 150px;
   }
 }
-.card h3 {
-  color: black;
-  font-size: 1.1rem;
-  font-weight: 300;
+.card__caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 5px 10px 20px;
+}
+.card__heart {
+  padding: 5px 24px 0px 0px;
+}
+.card__heart--empty {
+  position: relative;
+  color: #7e7e7e;
+  margin-right: -65px;
+  padding-right: 32px;
+  font-size: 1.8rem;
+}
+.card__heart--color {
+  color: #9356dc;
+  position: relative;
+  margin-right: -31px;
+  padding-right: 32px;
+  font-size: 1.8rem;
+}
+.card__heart--color:hover {
+  transform: scale(1);
+}
+
+.card__figure--new {
+  display: flex;
+  justify-content: center;
+  line-height: 2.2rem;
+  font-size: 1rem;
+  color: #158A69;
+  background-color: #158A69;
+  background-position: 75% 15%;
+  border-radius: 3px;
+  position: relative;
+  min-width: 100px;
+  max-width: 35%;
+  top: -185px;
+  left: 60%;
+  background: #c1ede2;
+  font-weight: bold;
+}
+.card__figure--new:hover {
+  background: #0e5e47;
 }
 @media (min-width: 600px) {
-  .card h3 {
-    font-size: 1.5rem;
-    line-height: 50px;
-  }
-}
-.card__caption--heart {
-  display: grid;
-  grid-template-rows: 12px 70px;
-  grid-template-columns: 80px 1fr 40px;
-  gap: 15px;
-  padding-left: 10px;
-  align-items: baseline;
-}
-.card__caption--heart h2 {
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-row-end: 1;
-  grid-column-end: 3;
-}
-.card__caption--heart h3 {
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-column-end: 3;
-}
-@media (min-width: 900px) {
-  .card {
-    width: 100%;
-    grid-template-rows: 12px 70px;
-    grid-template-columns: 80px 1fr 150px;
+  .card__figure--new:hover {
+    max-width: 30%;
   }
 }
 
@@ -322,8 +340,10 @@ ul {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  height: 10vh;
   width: 100%;
+}
+.logo h1 {
+  margin-bottom: 5px;
 }
 .logo__text {
   font-size: 2.2rem;
@@ -358,6 +378,7 @@ ul {
 }
 .footer__title {
   font-size: 1.1rem;
+  color: white;
 }
 .footer a {
   color: white;
@@ -376,13 +397,12 @@ ul {
 }
 
 /*************     RECHERCHE ***********/
-/************  CARD ****************/
 .search__form {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   background-color: #EAEAEA;
-  height: 2.4rem;
+  height: 2.7rem;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 900px) {
@@ -395,6 +415,7 @@ ul {
   border: none;
   background-color: #EAEAEA;
   height: 2rem;
+  font-weight: 700;
 }
 
 .info {
@@ -402,7 +423,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-bottom: 30px;
+  padding: 8px 10px 40px 10px;
   align-items: center;
   background-color: #F6F6F6;
   font-size: 2.2rem;
@@ -411,6 +432,13 @@ ul {
   .info {
     font-size: 1.8rem;
   }
+}
+.info__resa {
+  padding-top: 30px;
+  font-size: 23px;
+}
+.info__discover {
+  font-size: 17px;
 }
 
 .logo {
