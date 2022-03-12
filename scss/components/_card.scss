@@ -4,47 +4,20 @@
   background-color: $info-color;
   padding: 35px 13px 0px 13px;
   margin-top: 20px;
-  h3, p {
-    font-size: 1.3rem;
-  }
 
-  @include tablet-landscape-up {
-    margin-top: -34px;
-    h2 {
-      margin-top: -15px;
-    }
-  }
-
-  @include desktop-up {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-evenly;
-    background-color: inherit;
-    margin-top: -50px;
-    h2 {
-      display: none;
-    }
-  }
-
-  &__desktop {
-      font-size: 1.8rem;
-      text-align: left;
-
-      @include tablet-landscape-up {
-        text-align: end;
-    }
+  &__title {
+    font-size: 1.8rem;
+    text-align: left;
   }
 
   &__menu {
     background-color: $white-color;
     border-radius: 20px 20px;
     margin-bottom: 20px;
+  }
 
-    @include tablet-landscape-up {
-      background-color: $info-color;
-      text-align: inherit;
-    }
+  &__figure {
+    position: relative;
   }
 
   &__figure img {
@@ -52,10 +25,6 @@
     object-fit: cover;
     max-height: 200px;
     border-radius: 20px 20px 0px 0px;
-
-    @include phone-small {
-      max-height: 150px;
-    }
   }
 
   &__caption {
@@ -66,28 +35,32 @@
   }
 
   &__heart {
-    padding: 5px 24px 0px 0px;
-
-  }
-
-  &__heart--empty {
     position: relative;
-    color: $dark-light-color;
-    margin-right: -65px;
-    padding-right: 32px;
-    font-size: 1.8rem;
-  }
+    color: black;
 
-  &__heart--color {
-    color: $primary-color;
-    &:hover {
-      transform: scale(1);
+
+    &__item {
+      position: absolute;
+      background-color: $gradient-light-light;
+      transition: opacity 1s;
+      top: 7px;
+      right: 20px;
+      font-size: 1.8rem;
+
+      &--filled {
+        opacity: 0;
+        transition: opacity 1s;
+        background: $gradient-light;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        right: 20px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
-
-    position: relative;
-    margin-right: -31px;
-    padding-right: 32px;
-    font-size: 1.8rem;
   }
 }
 
@@ -100,11 +73,11 @@
   background-color: $tag-font-color;
   background-position: 75% 15%;
   border-radius: 3px;
-  position: relative;
+  position: absolute;
   min-width: 100px;
   max-width: 35%;
-  top: -185px;
-  left: 60%;
+  top: 10px;
+  right: 20px;
   background: lighten($tertiary-color, 10);
   font-weight: bold;
 
