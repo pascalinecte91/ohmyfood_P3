@@ -1,3 +1,7 @@
+/* FOR USE MIXINS : example :  @include phone-only 
+
+***************************************/
+
 @mixin phone-small {
     @media (max-width: 300px) {
         @content;
@@ -32,44 +36,3 @@
         @content;
     }
 }
-
-/***************  FOR SIZE ************/
-
-/* FOR USE MIXINS : 
-.class { font-size :1rem; 
-    @include phone-only { font-size: 0.5rem; }
-
-***************************************/
-
-@mixin for-size($size) {
-    @if $size==phone-only {
-        @media (max-width: 599px) {
-            @content;
-        }
-    }
-
-    @else if $size==tablet-portrait {
-        @media (min-width: 600px) {
-            @content;
-        }
-    }
-
-    @else if $size==tablet-landscape-up {
-        @media (min-width: 900px) {
-            @content;
-        }
-    }
-
-    @else if $size==desktop-up {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
-
-    @else if $size==big-desktop {
-        @media (min-width: 1800px) {
-            @content;
-        }
-    }
-}
-

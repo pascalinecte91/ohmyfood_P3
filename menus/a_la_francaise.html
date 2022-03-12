@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,38 +11,124 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-   
 
-    <header class="logo">
-       
-            <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
-        <h1>Ohmyfood</h1>
-    </header>
 
-     <!----------------------     PICTURE    ---------------------------->
-     <section class="menu">
-         <figure class="menu__picture">
+<header class="logo">
+<a href="/index.html"><i class="fas fa-arrow-left"></i></a>
+    <h1>ohmyfood</h1>
+</header>
+
+<!----------------------     PICTURE    ---------------------------->
+<section class="menu">
+    <figure class="menu__picture">
         <img src="../assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="Plat - A la française">
     </figure>
+</section>
+
+<!----------------------     MENU STARTER   ---------------------------->
+<main class="menuMain">
+    <section class="starter">
+        <div class="card__heart--menu">
+            <h1 class="starter__title">À la française</h1>
+            <i class="card__heart__item  far fa-heart"></i>
+            <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+        </div>
+        <h2 class="subtitle">Entrées</h2>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Tartare de poulpe acidulé</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Aux zestes d'orange</span>
+                <span class="btn-list__color--price">25€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Velouté de légumes d'antan</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Carotte, panais, topinambour</span>
+                <span class="btn-list__color--price">35€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Soupe à l'oignon</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Revisitée</span>
+                <span class="btn-list__color--price">20€</span>
+            </div>
+        </button>
+
     </section>
 
+<!----------------------     DISHES   ---------------------------->
+    <section class="dishes">
+        <h2 class="subtitle">Plats</h2>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Coquilles Saint-Jacques</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Accompagnées d'une purée de panais</span>
+                <span class="btn-list__color--price">40€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Magret de canard</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Et parmentier de pommes de terre</span>
+                <span class="btn-list__color--price">35€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Pigeonneau d’Ille-et-Vilaine</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Sur son lit de gnocchis aux légumes</span>
+                <span class="btn-list__color--price">44€</span>
+            </div>
+        </button>
+
+    </section>
+
+    <!----------------------     DESSERT   ---------------------------->
+    <section class="desserts">
+        <h2 class="subtitle">Desserts</h2>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Pétales de violettes glacés</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Et purée de noisettes</span>
+                <span class="btn-list__color--price">18€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Fondant au chocolat</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Revisité</span>
+                <span class="btn-list__color--price">22€</span>
+            </div>
+        </button>
+        <button class="btn-list__color">
+            <span class="btn-list__color--title">Millefeuille croustillant</span>
+            <div class="btn-list__color">
+                <span class="btn-list__color--dish">Myrtilles et pâte d’amande</span>
+                <span class="btn-list__color--price">23€</span>
+            </div>
+        </button>
+    
+
+    <!--------------------    ORDER BUTTON    -------------------------------->
+
+    <button class="btn__info btn__info--order">Commander</button>
+</section>
+</main>
 
 
+<!--------------------    FOOTER    -------------------------------->
 
-
-
-
-
-    <!--------------------    FOOTER    -------------------------------->
-
-    <footer class="footer">
-        <p class="footer__title">ohmyfood</p>
-        <ul class="footer__list">
-            <li><i class="fas fa-utensils footer__list--ustensil"></i>Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping footer__list--helping"></i>Devenir un partenaire</li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
-        </ul>
-    </footer>
+<footer class="footer">
+    <p class="footer__title">ohmyfood</p>
+    <ul class="footer__list">
+        <li><i class="fas fa-utensils footer__list--ustensil"></i>Proposer un restaurant</li>
+        <li><i class="fas fa-hands-helping footer__list--helping"></i>Devenir un partenaire</li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
+    </ul>
+</footer>
 </body>
+
 </html>

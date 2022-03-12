@@ -1,7 +1,4 @@
-/***************  FOR SIZE ************/
-/* FOR USE MIXINS : 
-.class { font-size :1rem; 
-    @include phone-only { font-size: 0.5rem; }
+/* FOR USE MIXINS : example :  @include phone-only 
 
 ***************************************/
 /* FOR USE MIXINS :   for example
@@ -88,9 +85,12 @@
   justify-content: center;
   box-shadow: 0px 5px 8px #cccccc;
   background: linear-gradient(to top, #9356dc, #ff79da);
+  z-index: 0;
   font-weight: 400;
   border: 0;
   color: white;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #e783cb;
   font-size: 1.2rem;
   border-radius: 30px;
   margin: 35px 0px;
@@ -98,7 +98,13 @@
   padding: 15px;
 }
 .btn__info:hover {
-  background: linear-gradient(to top, #9356dc, #ff79da);
+  background-color: linear-gradient(to top, #9356dc, #ff79da);
+}
+.btn__info:hover {
+  box-shadow: 5px 5px 5px #d6cbd4;
+}
+.btn__info:hover:after {
+  opacity: 0.3;
 }
 
 .btn-list {
@@ -189,6 +195,11 @@
   object-fit: cover;
   max-height: 200px;
   border-radius: 20px 20px 0px 0px;
+}
+@media (min-width: 900px) {
+  .card__figure img {
+    width: 400px;
+  }
 }
 .card__caption {
   display: flex;
@@ -349,6 +360,11 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+@media (min-width: 1200px) {
+  .info__resa {
+    text-shadow: 5px 5px 10px #b89daf;
+  }
+}
 .info__discover {
   font-size: 1.3rem;
 }
@@ -384,20 +400,145 @@
   .card__title {
     display: none;
   }
-  .card __figure img {
-    min-width: 400px;
-  }
 }
 
+/****************
+      header
+*****************/
 .logo {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
+  /**********    arrow left ******/
 }
-.logo i {
-  justify-content: flex-start;
+.logo h1 {
+  padding-left: 20px;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+}
+.logo a {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.1rem;
+  top: 35px;
+  color: black;
+}
+.logo__text {
+  font-size: 2.2rem;
+  color: black;
+}
+@media (max-width: 599px) {
+  .logo__text {
+    font-size: 1.4rem;
+  }
+}
+
+/****************
+      PICTURE
+*****************/
+.menu__picture img {
+  width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 600px) {
+  .menu__picture img {
+    height: 450px;
+  }
+}
+@media (min-width: 900px) {
+  .menu__picture img {
+    height: 500px;
+    object-position: 100% 72%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__picture img {
+    height: 300px;
+  }
+}
+
+/****************
+    menu
+*****************/
+.menuMain {
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  margin-top: -80px;
+}
+
+.starter,
+.dishes,
+.desserts {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  border-radius: 40px 40px 0 0;
+}
+.starter__title,
+.dishes__title,
+.desserts__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 900px) {
+  .desserts {
+    height: 400px;
+  }
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+.subtitle::after {
+  content: "";
+  padding-bottom: 0.5rem;
+  width: 2.5rem;
+  border-bottom: #99E2D0 3px solid;
+}
+
+/***********  button entrees *********/
+.btn-list__color {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  border: none;
+  padding: 15px 15px 7px 10px;
+  line-height: 3px;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.btn-list__color--title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.btn-list__color--price {
+  font-weight: bold;
+}
+
+/***********  button   order  ****/
+.btn__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+.btn__info--order {
+  min-width: 220px;
+  margin: 60px 0px 60px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

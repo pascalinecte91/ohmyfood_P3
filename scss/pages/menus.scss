@@ -1,12 +1,144 @@
+/****************
+      header
+*****************/
+
 .logo {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: baseline;
-   i {
-       justify-content: flex-start;
-   }
-        
+
+    h1 {
+        padding-left: 20px;
+        font-family: $font-title;
+        font-size: 1.7rem;
     }
 
+    /**********    arrow left ******/
+    a {
+        position: absolute;
+        left: 1rem;
+        font-size: 1.1rem;
+        top: 35px;
+        color: black;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        color: black;
+
+        @include phone-only {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/****************
+      PICTURE
+*****************/
+.menu__picture img {
+    width: 100%;
+    object-fit: cover;
+
+    @include tablet-portrait {
+        height: 450px;
+    }
+
+    @include tablet-landscape-up {
+        height: 500px;
+        object-position: 100% 72%;
+    }
+
+    @include phone-only {
+        height: 300px;
+    }
+}
+
+/****************
+    menu
+*****************/
+.menuMain {
+    position: relative;
+    background-color: $info-color;
+    border-radius: 40px;
+    margin-top: -80px;
+}
+
+.starter,
+.dishes,
+.desserts {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    border-radius: 40px 40px 0 0;
+
+    &__title {
+        font-family: $font-title;
+        font-size: 1.8rem;
+    }
+}
+
+
+.desserts {
+    @include tablet-landscape-up {
+        height: 400px;
+    }
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+
+    &::after {
+        content: "";
+        padding-bottom: 0.5rem;
+        width: 2.5rem;
+        border-bottom: $tertiary-color 3px solid;
+    }
+}
+
+
+/***********  button entrees *********/
+
+.btn-list__color {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    border: none;
+    padding: 15px 15px 7px 10px;
+    line-height: 3px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+
+    &--title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding-left: 10px;
+    }
+    &--price {
+        font-weight: bold;
+    }
+}
+
+/***********  button   order  ****/
+
+.btn__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+
+    &--order {
+        min-width: 220px;
+        margin: 60px 0px 60px 0px;
+    }
+}

@@ -40,6 +40,9 @@ input {
     &__resa {
         padding-left: 40px;
         padding-right: 40px;
+    @include desktop-up {
+        text-shadow: 5px 5px 10px rgb(184, 157, 175);
+    }
     }
 
     &__discover {
@@ -74,8 +77,6 @@ input {
         &__title{
             display: none;
         }
-    __figure img {
-        min-width: 400px;
-    }
+   
     }
 }
