@@ -3,16 +3,19 @@
 *****************/
 
 .logo {
-    display: flex;
+    @include flex-jus-center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     align-items: baseline;
 
     h1 {
         padding-left: 20px;
         font-family: $font-title;
         font-size: 1.7rem;
+        
+        @include tablet-portrait {
+            font-size: 2.5;
+        }
     }
 
     /**********    arrow left ******/
@@ -44,25 +47,53 @@
     @include tablet-portrait {
         height: 450px;
     }
-
-    @include tablet-landscape-up {
-        height: 500px;
-        object-position: 100% 72%;
-    }
-
     @include phone-only {
         height: 300px;
     }
+    @include tablet-landscape-up {
+        height: 500px;
+        object-position: 100% 20%;
+    }
+    @include desktop-up {
+        height: 500px;
+        object-position: 100% 55%;
+    }
+
+
+ 
 }
 
 /****************
     menu
 *****************/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .menuMain {
     position: relative;
     background-color: $info-color;
     border-radius: 40px;
     margin-top: -80px;
+
+    @include desktop-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        span {
+            font-size: 1rem;
+        }
+    }
+}
+
+body {
+    @include tablet-portrait {
+        span {
+            font-size: 1.1rem;
+        }
+    }
 }
 
 .starter,
@@ -73,16 +104,32 @@
     padding: 1rem 1rem;
     border-radius: 40px 40px 0 0;
 
-    &__title {
+    &--title {
         font-family: $font-title;
-        font-size: 1.8rem;
     }
-}
+}   
 
-
-.desserts {
-    @include tablet-landscape-up {
-        height: 400px;
+.card__heart--menu {
+    i {
+        @include phone-only {
+            top: 43px;
+            right: 40px;
+        }
+       
+        @include tablet-portrait {
+            top: 43px;
+            right: 41px;
+        }
+        @include desktop-up {
+            left: 45px;
+            top: 20px;
+            font-size: 2.0rem;
+        }
+        @include big-desktop {
+            left: 100px;
+            top: 22px;
+            font-size: 2.0rem;
+        }
     }
 }
 
@@ -111,34 +158,58 @@
     flex-wrap: wrap;
     background-color: white;
     border: none;
-    padding: 15px 15px 7px 10px;
-    line-height: 3px;
     border-radius: 15px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px 4px 10px;
     width: 100%;
     justify-content: space-between;
-
+   
     &--title {
         font-size: 1.1rem;
         font-weight: 600;
         padding-left: 10px;
+      @include phone-small {
+          font-size: 1rem;
+      }
+    }
+     &--dish {
+        font-weight: 300;
     }
     &--price {
         font-weight: bold;
     }
+   
 }
 
 /***********  button   order  ****/
 
 .btn__info {
-    display: flex;
+    @include flex-center-al-co;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
     align-self: center;
-
+   
     &--order {
         min-width: 220px;
         margin: 60px 0px 60px 0px;
+
+        @include tablet-portrait {
+            margin: 15px;
+            align-self: flex-start;
+        }
     }
 }
+
+.starter {
+    &__title {
+        font-family: $font-title;
+        font-size: 1.6rem;
+        @include desktop-up {
+           @include flex-jus-center;
+           font-size: 1.9rem;
+           margin-top:0px;
+        }
+        @include tablet-landscape-up {
+            @include flex-jus-center;
+        }
+    }   
+}      

@@ -1,14 +1,10 @@
-/* FOR USE MIXINS : example :  @include phone-only 
-
-***************************************/
-
 @mixin phone-small {
-    @media (max-width: 300px) {
+    @media (max-width: 400px) {
         @content;
     }
 }
 @mixin phone-only {
-    @media (max-width: 599px) {
+    @media (max-width: 599.98px) {
         @content;
     }
 }
@@ -20,7 +16,7 @@
 }
 
  @mixin tablet-landscape-up {
-    @media (min-width: 900px) {
+    @media (min-width: 899.98px) {
         @content;
     }
 } 
@@ -36,3 +32,7 @@
         @content;
     }
 }
+
+/* FOR USE MIXINS : example :  @include phone-only 
+
+***************************************/

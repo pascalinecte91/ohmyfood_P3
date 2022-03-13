@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="designation" content="Réservation en ligne de plats gastronomiques">
-    <title>Ohmyfood</title>
+    <title>ohmyfood</title>
     <script src="https://kit.fontawesome.com/0bfe0e9acc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!--  SPINNER  -->
+   <!--  <div class="pencil">
+        <div class="pencil__ball-point"></div>
+        <div class="pencil__cap"></div>
+        <div class="pencil__cap-base"></div>
+        <div class="pencil__middle"></div>
+        <div class="pencil__eraser"></div>
+      </div>
+      <div class="line"></div>
+      <h2>Passez votre commande chez ohmyfood</h2> -->
 
-    <!----------------------     HEADER    ----------------------------->
+    <!--  HEADER  -->
 
     <header class="logo">
         <h1 class="logo__text">Ohmyfood</h1>
     </header>
 
-    <!----------------------     SEARCH     ---------------------------->
+    <!--   SEARCH -->
+
     <section class="search">
         <form class="search__form">
             <i class=" fas fa-map-marker-alt "></i>
@@ -27,38 +38,39 @@
         </form>
     </section>
 
-    <!--------------------     INFO    -------------------------->
-    <main>
-        
-    <div class="ohmyfood-desktop">
-    <section class="info">
-        <h2 class="info__resa">Réservez le menu qui vous convient</h2>
-        <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
-        <button class="btn__info">Explorer nos restaurants</button>
-    </section>
+    <!--   INFO  -->
 
-    <!--------------------       STEPS       -------------------------->
-  
-        <section class="steps">
-            <h2>Fonctionnement</h2>
-            <button class="btn-list">
-                <span class="btn-list__item--number">1</span>
-                <span class="btn-list__item--icon"><i class="fas fa-mobile-alt"></i></span>
-                <span class="btn-list__item--text">Choisissez un restaurant</span>
-            </button>
-            <button class="btn-list">
-                <span class="btn-list__item--number">2</span>
-                <span class="btn-list__item--icon "><i class="fas fa-solid fa-list-ul"></i></span>
-                <span class="btn-list__item--text">Composez votre menu</span>
-            </button>
-            <button class="btn-list">
-                <span class="btn-list__item--number">3</span>
-                <span class="btn-list__item--icon"><i class="fas fa-solid fa-store"></i></span>
-                <span class="btn-list__item--text">Dégustez au restaurant</span>
-            </button>
-        </section>
-    </div>
-        <!--------------------   CARDS   --  RESTAURANT-------------->
+    <main>
+
+        <div class="ohmyfood-desktop">
+            <section class="info">
+                <h2 class="info__resa">Réservez le menu qui vous convient</h2>
+                <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
+                <button class="btn__info">Explorer nos restaurants</button>
+            </section>
+
+            <!-- STEPS -->
+
+            <section class="steps">
+                <h2>Fonctionnement</h2>
+                <button class="btn-list">
+                    <span class="btn-list__item--number">1</span>
+                    <span class="btn-list__item--icon"><i class="fas fa-mobile-alt"></i></span>
+                    <span class="btn-list__item--text">Choisissez un restaurant</span>
+                </button>
+                <button class="btn-list">
+                    <span class="btn-list__item--number">2</span>
+                    <span class="btn-list__item--icon "><i class="fas fa-solid fa-list-ul"></i></span>
+                    <span class="btn-list__item--text">Composez votre menu</span>
+                </button>
+                <button class="btn-list">
+                    <span class="btn-list__item--number">3</span>
+                    <span class="btn-list__item--icon"><i class="fas fa-solid fa-store"></i></span>
+                    <span class="btn-list__item--text">Dégustez au restaurant</span>
+                </button>
+            </section>
+        </div>
+        <!-- CARDS  RESTAURANT  -->
         <section class="card">
             <h2 class="card__title">Restaurants</h2>
             <a href="./menus/la_palette_du_goût.html" class="card__menu">
@@ -67,13 +79,13 @@
                     <span class="card__figure card__figure--new">Nouveau</span>
                     <figcaption class="card__caption">
                         <div class="card__caption--title">
-                        <h3>La palette du gout</h3>
-                        <p>Ménilmontant</p>
-                    </div>
+                            <h3>La palette du gout</h3>
+                            <p>Ménilmontant</p>
+                        </div>
                         <div class="card__heart">
                             <i class="card__heart__item  far fa-heart"></i>
                             <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
-                            </div>
+                        </div>
                     </figcaption>
                 </figure>
             </a>
@@ -84,8 +96,8 @@
                     <span class="card__figure card__figure--new">Nouveau</span>
                     <figcaption class="card__caption">
                         <div class="card__caption--title">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
                         </div>
                         <div class="card__heart">
                             <i class="card__heart__item  far fa-heart"></i>
@@ -100,12 +112,12 @@
                     <img src="./assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="la palette du gout">
                     <figcaption class="card__caption">
                         <div class="card__caption--title">
-                        <h3>A la française</h3>
-                        <p>Cité Rouge</p>
-                    </div>
-                    <div class="card__heart">
-                        <i class="card__heart__item  far fa-heart"></i>
-                        <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div class="card__heart">
+                            <i class="card__heart__item  far fa-heart"></i>
+                            <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
                         </div>
                     </figcaption>
                 </figure>
@@ -116,20 +128,20 @@
                     <img src="./assets/pictures/le_delice_des_sens_louis-hansel.jpg" alt="la palette du gout">
                     <figcaption class="card__caption">
                         <div class="card__caption--title">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                    <div class="card__heart">
-                        <i class="card__heart__item  far fa-heart"></i>
-                        <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="card__heart">
+                            <i class="card__heart__item  far fa-heart"></i>
+                            <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
                         </div>
                     </figcaption>
                 </figure>
             </a>
         </section>
 
-</main>
-    <!--------------------    FOOTER    -------------------------------->
+    </main>
+    <!--  FOOTER  -->
 
     <footer class="footer">
         <p class="footer__title">ohmyfood</p>
