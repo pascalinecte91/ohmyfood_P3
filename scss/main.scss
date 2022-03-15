@@ -1,17 +1,21 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins-media-queries";
 @import "./abstracts/mixins";
-@import "./abstracts/animation";
+
 
 @import "./base/typo";
 @import "./base/reset";
-@import "./base/loader.scss";
+
 
 @import "./components/buttons";
 @import "./components/card";
+@import "./components/_loader";
+@import "./components/animation";
+
 
 @import "./layouts/header";
 @import "./layouts/footer";
+
 
 @import "./pages/accueil";
 @import "./pages/menus";

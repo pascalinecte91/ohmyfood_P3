@@ -7,21 +7,21 @@
     justify-content: center;
     box-shadow: 0px 5px 8px #cccccc;
     background: $gradient-light;
-    &:hover {
-      background-color: $gradient-light;
-    }
     z-index: 0;
     font-weight: 400;
     border: 0;
     color: white;
     overflow: hidden;
     box-shadow: 5px 5px 5px rgba($color: hsl(317, 68%, 71%), $alpha: 1.4);
+
     &:hover {
       box-shadow: 5px 5px 5px rgba($color: rgb(214, 203, 212), $alpha: 1.2);
+
       &:after {
         opacity: 0.3;
       }
     }
+
     font-size: 1.2rem;
     border-radius: 30px;
     margin: 35px 0px;
@@ -40,7 +40,6 @@
   box-shadow: 0px 5px 8px #e6e6e6;
   padding: 20px 0px 20px 0px;
   margin-bottom: 25px;
-  
 
   &:hover {
     background-color: $btn-list-hover;
@@ -69,7 +68,6 @@
     position: relative;
     left: -10px;
     padding-top: 2px;
-    
 
     @include tablet-portrait {
       height: 30px;
@@ -84,9 +82,7 @@
     padding-left: 15px;
     font-size: 1.2rem;
     color: $dark-light-color;
-    &:hover {
-      color: $primary-color;
-    }
+
     i.fa {
       font-size: 0.8rem;
     }

@@ -13,7 +13,7 @@
             padding-left: 50px;
         }
     }
-    }
+}
 
 input {
     border: none;
@@ -22,7 +22,7 @@ input {
     font-weight: 500;
     font-size: 1.2rem;
     padding-left: 10px;
-    }
+}
 
 
 .info {
@@ -32,46 +32,51 @@ input {
     background-color: $info-color;
     font-size: 1.2rem;
     padding: 25px 15px;
+
     &__resa {
         padding-left: 40px;
         padding-right: 40px;
-    @include desktop-up {
-        text-shadow: 5px 5px 10px rgb(184, 157, 175);
-    }
+
+        @include desktop-up {
+            text-shadow: 5px 5px 10px rgb(184, 157, 175);
+        }
     }
 
     &__discover {
         font-size: 1.3rem;
     }
 }
+
 .steps {
-    padding: 25px; 
+    padding: 25px;
+
     @include tablet-portrait {
         width: 100%;
         text-align: center;
     }
-    
+
 }
 
 .ohmyfood-desktop {
     @include tablet-landscape-up {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 10px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
     }
 }
+
 .card {
     @include tablet-landscape-up {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 10px;
-    justify-content: space-evenly;
-        &__title{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+        justify-content: space-evenly;
+
+        &__title {
             display: none;
         }
-   
     }
 }
