@@ -1,23 +1,26 @@
 /**************** LOGO des Pages***************/
 
-
 .logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     width: 100%;
-     h1 {
+
+    h1 {
         margin-bottom: 10px;
-       
+
     }
+
     &__text {
         font-size: 2.2rem;
         font-family: $font-title;
+
         @include phone-only {
-        font-size: 1.9rem;
+            font-size: 1.9rem;
         }
     }
+
     @include tablet-landscape-up {
         width: 100%;
         box-shadow: 0px 2px 3px #cccccc;

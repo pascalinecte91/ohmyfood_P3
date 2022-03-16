@@ -10,6 +10,7 @@
   body {
     font-weight: 300;
     min-height: 100vh;
+
     h1,
     span {
       font-size: 2rem;
@@ -28,6 +29,7 @@
   img {
     max-width: 100%;
     object-fit: cover;
+
     @include desktop-up {
       height: 500px;
     }
@@ -51,7 +53,8 @@
     margin: 0px;
   }
 
-  h3, p {
+  h3,
+  p {
     margin: 0;
     color: black;
     font-size: 1.3rem;
@@ -62,8 +65,8 @@
   margin: 0px;
 }
 
-.ohmyfood-desktop { 
-  @include tablet-landscape-up{
+.ohmyfood-desktop {
+  @include tablet-landscape-up {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -71,7 +74,3 @@
     padding-top: 10px;
   }
 }
-
- 
-  
-
