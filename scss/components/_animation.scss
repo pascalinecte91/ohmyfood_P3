@@ -1,22 +1,40 @@
- .btn-list__color {
-    animation: fadeIn linear 4s;
-    -webkit-animation: fadeIn linear 4s;
-    -moz-animation: fadeIn linear 4s;
-   
-  }
-  @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
- 
+.starters {
+  animation: fadeIn linear 3s;
+  transition-delay: 0;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+}
+
+.dishes {
+  animation: fadeIn linear 3s;
+  transition-delay: 1;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+}
+
+.desserts {
+  animation: fadeIn linear 3s;
+  transition-delay: 2;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+}
+
+
+
+// APPARITION PROGRESSIVE 
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+

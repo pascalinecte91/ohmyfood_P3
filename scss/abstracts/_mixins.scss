@@ -1,11 +1,8 @@
-
-
 /* FOR USE MIXINS :   for example
 .class { font-size :1rem; 
     @include -------- { 
         font-size: 0.5rem; 
     }
-
 /***************  FOR PADDING ************/
 
 @mixin padding-footer {
@@ -22,9 +19,25 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    
+
 }
+
 @mixin flex-jus-center {
     display: flex;
     justify-content: center;
+}
+
+@mixin dfc {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin box-shMenu {
+    box-shadow: 1px 6px 22px -7px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: 1px 6px 22px -7px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: 1px 6px 22px -7px rgba(0, 0, 0, 0.76);
+}
+
+@mixin box-shCardA {
+    box-shadow: 0px 5px 8px #e6e6e6;
 }

@@ -1,16 +1,21 @@
 .card {
-  display: flex;
-  flex-direction: column;
+  @include dfc;
   background-color: $info-color;
   padding: 35px 13px 0px 13px;
   margin-top: 20px;
+  padding-bottom: 60px;
+
   a {
-    box-shadow: 0px 5px 8px #e6e6e6;
+    @include box-shCardA;
   }
 
   &__title {
     font-size: 1.8rem;
-    text-align: left;  
+    text-align: left;
+
+    @include tablet-portrait {
+      text-align: center;
+    }
   }
 
   &__menu {
@@ -28,6 +33,7 @@
     object-fit: cover;
     max-height: 200px;
     border-radius: 20px 20px 0px 0px;
+
     @include tablet-landscape-up {
       width: 400px;
     }
@@ -37,7 +43,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 15px 5px 10px 20px;
+    margin: 0px 5px 10px 13px;
+
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      margin-top: 12px;
+    }
+
+    &--title {
+      font-size: 1.2rem;
+    }
   }
 
   &__heart {
@@ -48,9 +65,9 @@
       position: absolute;
       background-color: $gradient-light-light;
       transition: opacity 1s;
-      top: 7px;
-      right: 20px;
-      font-size: 1.8rem;
+      top: 20px;
+      right: 23px;
+      font-size: 1.7rem;
 
       &--filled {
         opacity: 0;
@@ -59,7 +76,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        right: 20px;
+        right: 22px;
 
         &:hover {
           opacity: 1;
@@ -81,7 +98,7 @@
   position: absolute;
   min-width: 100px;
   max-width: 35%;
-  top: 10px;
+  top: 14px;
   right: 20px;
   background: lighten($tertiary-color, 10);
   font-weight: bold;

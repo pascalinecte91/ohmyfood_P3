@@ -90,6 +90,18 @@
       font-size: 2rem;
       margin: 7px;
     }
+    @include tablet-portrait{
+      height: 4rem;
+      font-size: 2.2rem;
+    }
+    @include tablet-landscape-up {
+      height: 7rem;
+      width: 30rem;
+      font-size: 2.3rem;
+      padding-top: 30px;
+      
+    }
+
 //container des oh my food
     &Container {
       display: flex;

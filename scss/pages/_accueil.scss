@@ -24,7 +24,6 @@ input {
     padding-left: 10px;
 }
 
-
 .info {
     @include flex-center-al-it;
     flex-direction: column;
@@ -32,6 +31,11 @@ input {
     background-color: $info-color;
     font-size: 1.2rem;
     padding: 25px 15px;
+    width: 100%;
+
+    @include desktop-up {
+        border-radius: 0px 0px 20px 20px;
+    }
 
     &__resa {
         padding-left: 40px;
@@ -39,6 +43,7 @@ input {
 
         @include desktop-up {
             text-shadow: 5px 5px 10px rgb(184, 157, 175);
+
         }
     }
 
@@ -55,18 +60,25 @@ input {
         text-align: center;
     }
 
+    @include desktop-up {
+        padding: 0px 100px 0px 100px;
+    }
 }
 
 .ohmyfood-desktop {
     @include tablet-landscape-up {
-        display: flex;
-        flex-direction: row;
+      display: flex;
+      flex-direction: row;
         width: 100%;
         gap: 10px;
     }
 }
 
 .card {
+    @include desktop-up {
+        border-radius: 20px 20px 0px 0px;
+    }
+
     @include tablet-landscape-up {
         display: flex;
         flex-direction: row;
