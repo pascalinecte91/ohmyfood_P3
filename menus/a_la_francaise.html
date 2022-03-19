@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -12,123 +12,161 @@
 </head>
 
 <body>
-    <!----------------------     HEADER    ----------------------------->
+    <!---     HEADER   -->
 
     <header class="logo">
         <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
         <h1>ohmyfood</h1>
     </header>
 
-    <!----------------------     PICTURE    ---------------------------->
-    <section class="menu">
-            <img src="../assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="Plat - A la française">
-    </section>
+    <!--   PICTURE   -->
+    <div class="menu__picture">
+        <img src="../assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="Plat - A la française"></div>
 
-    <!----------------------     MENU STARTER   ---------------------------->
-    <main class="menuMain">
+    <!--    MENU STARTER   -->
+
+    <!--      TITLE  &  HEART   -->
+    <main class="mainMenu">
         <section class="starter">
-            <div class="card__heart--menu">
-                <h1 class="starter__title">À la française</h1>
-                <i class="card__heart__item  far fa-heart"></i>
+            <h1 class="starter__title">À la francaise</h1>
+            <div class="card__heart">
+                <i class="card__heart__item--menu  far fa-heart"></i>
                 <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
             </div>
-            <h2 class="subtitle">Entrées</h2>
-            <button class="btn-list__color">
-                <span class="btn-list__color--title">Tartare de poulpe acidulé</span>
-                <div class="btn-list__color">
-                    <span class="btn-list__color--dish">Aux zestes d'orange</span>
-                    <span class="btn-list__color--price">25€</span>
+        </section>
+
+        <!-- STARTERS  -->
+
+        <section class="starters">
+            <h3 class="starterItem__subtitle">Entrées</h3>
+            <article class="starter-item">
+                <div class="starter-item__detail">
+                    <h4 class="starterItem__title">Tartare de poulpe acidulé</h4>
+                    <p class="starterItem__content">Aux zestes d'orange</p>
                 </div>
-                <div class="check"><i class="fa-light fa-circle-check"></i></div>
-            </button>
-            <button class="btn-list__color">
-                <span class="btn-list__color--title">Velouté de légumes d'antan</span>
-                <div class="btn-list__color">
-                    <span class="btn-list__color--dish">Carotte, panais, topinambour</span>
-                    <span class="btn-list__color--price">35€</span>
+                <div class="starter-item__price">
+                    <span>25€</span>  
                 </div>
-            </button>
-            <button class="btn-list__color">
-                <span class="btn-list__color--title">Soupe à l'oignon</span>
-                <div class="btn-list__color">
-                    <span class="btn-list__color--dish">Revisitée</span>
-                    <span class="btn-list__color--price">20€</span>
+                <div class="starter-item__icon">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-            </button>
+            </article>
+
+            <article class="starterItem ">
+                <header class="starterItem__header">
+                    <h4 class="starterItem__title">Velouté de légumes d'antan</h4>
+                    <p class="starterItem__content">Carotte, panais, topinambour</p>
+                </header>
+                <footer class="starterItem__choice">
+                    <span class="starterItem__price">35€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
+
+            <article class="starterItem ">
+                <header class="starterItem__header">
+                    <h4 class="starterItem__title">Soupe à l'oignon</h4>
+                    <p class="starterItem__content">Revisitée</p>
+                </header>
+                <footer class="starterItem__choice">
+                    <span class="starterItem__price">20€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
 
         </section>
 
-        <!----------------------     DISHES   ---------------------------->
-    <section class="dishes">
-        <h2 class="subtitle">Plats</h2>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Coquilles Saint-Jacques</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Accompagnées d'une purée de panais</span>
-                <span class="btn-list__color--price">40€</span>
-            </div>
-        </button>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Magret de canard</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Et parmentier de pommes de terre</span>
-                <span class="btn-list__color--price">35€</span>
-            </div>
-        </button>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Pigeonneau d’Ille-et-Vilaine</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Sur son lit de gnocchis aux légumes</span>
-                <span class="btn-list__color--price">44€</span>
-            </div>
-        </button>
+        <!--    DISHES   -->
+        <section class="dishes">
+            <h2 class="dishesItem__subtitle">Plats</h2>
 
-    </section>
+            <article class="dishItem ">
+                <header class="dishItem__header">
+                    <h4 class="dishItem__title">Coquilles Saint-Jacques</h4>
+                    <p class="dishItem__content">Accompagnées d'une purée de panais</p>
+                </header>
+                <footer class="dishItem__choice">
+                    <span class="dishItem__price">40€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
 
-    <!----------------------     DESSERT   ---------------------------->
-    <section class="desserts">
-        <h2 class="subtitle">Desserts</h2>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Pétales de violettes glacés</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Et purée de noisettes</span>
-                <span class="btn-list__color--price">18€</span>
-            </div>
-        </button>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Fondant au chocolat</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Revisité</span>
-                <span class="btn-list__color--price">22€</span>
-            </div>
-        </button>
-        <button class="btn-list__color">
-            <span class="btn-list__color--title">Millefeuille croustillant</span>
-            <div class="btn-list__color">
-                <span class="btn-list__color--dish">Myrtilles et pâte d’amande</span>
-                <span class="btn-list__color--price">23€</span>
-            </div>
-        </button>
+            <article class="dishItem ">
+                <header class="dishItem__header">
+                    <h4 class="dishItem__title">Magret de canard</h4>
+                    <p class="dishItem__content">Et parmentier de pommes de terre</p>
+                </header>
+                <footer class="dishItem__choice">
+                    <span class="dishItem__price">35€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
 
+            <article class="dishItem ">
+                <header class="dishItem__header">
+                    <h4 class="dishItem__title">Pigeonneau d’Ille-et-Vilaine</h4>
+                    <p class="dishItem__content">Sur son lit de gnocchis aux légumes</p>
+                </header>
+                <footer class="dishItem__choice">
+                    <span class="dishItem__price">44€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
+        </section>
 
-        <!--------------------    ORDER BUTTON    -------------------------------->
+        <!--    DESSERT  -->
+        <section class="desserts">
+            <h2 class="dessertsItem__subtitle">Desserts</h2>
 
+            <article class="dessertItem ">
+                <header class="dessertItem__header">
+                    <h4 class="dessertItem__title">Pétales de violettes glacés</h4>
+                        <p class="dessertItem__content">Et purée de noisettes</p>
+                </header>
+                <footer class="dessertItem__choice">
+                <span class="dessertItem__price">18€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
+            <article class="dessertItem ">
+                <header class="dessertItem__header">
+                    <h4 class="dessertItem__title">Fondant au chocolat</h4>
+                    <p class="dessertItem__content">Revisité</p>
+                </header>
+                <footer class="dessertItem__choice">
+                <span class="dessertItem__price">22€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
+            <article class="dessertItem ">
+                <header class="dessertItem__header">
+                    <h4 class="dessertItem__title">Millefeuille croustillant</h4>
+                    <p class="dessertItem__content">Myrtilles et pâte d’amande</p>
+                </header>
+                <footer class="dessertItem__choice">
+                <span class="dessertItem__price">23€</span>
+                    <i class="fa-light fa-circle-check"></i>
+                </footer>
+            </article>
+        </section>
         <button class="btn__info btn__info--order">Commander</button>
-    </section>
-</main>
+    
+            <!--    ORDER BUTTON   -->
+     
+    </main>
 
 
-    <!--------------------    FOOTER    -------------------------------->
+    <!--   FOOTER  -->
 
-<footer class="footer">
-    <p class="footer__title">ohmyfood</p>
-    <ul class="footer__list">
-        <li><i class="fas fa-utensils footer__list--ustensil"></i>Proposer un restaurant</li>
-        <li><i class="fas fa-hands-helping footer__list--helping"></i>Devenir un partenaire</li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
-    </ul>
-</footer>
+    <footer class="footer">
+        <p class="footer__title">ohmyfood</p>
+        <ul class="footer__list">
+            <li><a href="#"><i class="fas fa-utensils footer__list--ustensil"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping footer__list--helping"></i>Devenir un partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:ohmyfood@emailContact.com">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>

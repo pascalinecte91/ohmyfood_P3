@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,15 +13,15 @@
 
 <body>
     <!-- LOADER-SPINNER  -->
-    <div class="loader">
+        <div class="loader">
         <div class="loader__itemContainer">
             <div class="loader__item loader__item--1">Oh</div>
             <div class="loader__item loader__item--2">My</div>
             <div class="loader__item loader__item--3">Food</div>
         </div>
-    </div>
+    </div> 
     <div class="forSpinner">
-        
+
         <!--  HEADER  -->
 
         <header class="logo">
@@ -33,14 +33,14 @@
         <section class="search">
             <form class="search__form">
                 <i class=" fas fa-map-marker-alt "></i>
-                <input type="text" value=" Paris, Belleville" placeholder="Paris, Belleville">
+                <input type="search" name="country" value=" Paris, Belleville" placeholder="Paris, Belleville">
             </form>
         </section>
 
         <!--   INFO  -->
 
-        <main>
-            <div class="ohmyfood-desktop">
+    <main class="ohmyfood-desktop">
+        <div class="info-steps">
                 <section class="info">
                     <h2 class="info__resa">Réservez le menu qui vous convient</h2>
                     <span class="info__discover">Découvrez des restaurants d'exception, sélectionnés par nos
@@ -51,96 +51,97 @@
                 <!-- STEPS -->
 
                 <section class="steps">
-                    <h2>Fonctionnement</h2>
-                    <button class="btn-list">
-                        <span class="btn-list__item--number">1</span>
-                        <span class="btn-list__item--icon"><i class="fas fa-mobile-alt"></i></span>
-                        <span class="btn-list__item--text">Choisissez un restaurant</span>
-                    </button>
-                    <button class="btn-list">
-                        <span class="btn-list__item--number">2</span>
-                        <span class="btn-list__item--icon "><i class="fas fa-solid fa-list-ul"></i></span>
-                        <span class="btn-list__item--text">Composez votre menu</span>
-                    </button>
-                    <button class="btn-list">
-                        <span class="btn-list__item--number">3</span>
-                        <span class="btn-list__item--icon"><i class="fas fa-solid fa-store"></i></span>
-                        <span class="btn-list__item--text">Dégustez au restaurant</span>
-                    </button>
+                    <h2 class="steps__title">Fonctionnement</h2>
+                    <div class="btn-list__item">
+                        <span class="btn-list__item__button--number">1</span>
+                        <div class="btn-list__item__button">    
+                        <span class="btn-list__item__button--icon"><i class="fas fa-mobile-alt"></i></span>
+                        <span class="btn-list__item__button--textOne">Choisissez un restaurant</span>
+                        </div>
+                    </div>
+                    <div class="btn-list__item">
+                        <span class="btn-list__item__button--number">2</span>
+                        <span class="btn-list__item__button--icon "><i class="fas fa-solid fa-list-ul"></i></span>
+                        <span class="btn-list__item__button--text">Composez votre menu</span>
+                    </div>
+                    <div class="btn-list__item">
+                        <span class="btn-list__item__button--number">3</span>
+                        <span class="btn-list__item__button--icon"><i class="fas fa-solid fa-store"></i></span>
+                        <span class="btn-list__item__button--text">Dégustez au restaurant</span>
+                    </div>
                 </section>
             </div>
+                <!-- CARDS  RESTAURANT  -->
 
-            <!-- CARDS  RESTAURANT  -->
+                <section class="card">
+                    <h2 class="card__title">Restaurants</h2>
+                    <a href="./menus/la_palette_du_goût.html" class="card__menu">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/la_palette_du_gout_jay-wennington.jpg" alt="la palette du gout">
+                            <span class="card__figure card__figure--new">Nouveau</span>
+                            <figcaption class="card__caption">
+                                <div class="card__caption--title">
+                                    <h3>La palette du gout</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="card__heart">
+                                    <i class="card__heart__item  far fa-heart"></i>
+                                    <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
 
-            <section class="card">
-                <h2 class="card__title">Restaurants</h2>
-                <a href="./menus/la_palette_du_goût.html" class="card__menu">
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/la_palette_du_gout_jay-wennington.jpg" alt="la palette du gout">
-                        <span class="card__figure card__figure--new">Nouveau</span>
-                        <figcaption class="card__caption">
-                            <div class="card__caption--title">
-                                <h3>La palette du gout</h3>
-                                <p>Ménilmontant</p>
-                            </div>
-                            <div class="card__heart">
-                                <i class="card__heart__item  far fa-heart"></i>
-                                <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
+                    <a href="./menus/la_note_enchantee.html" class="card__menu">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/la_note_enchantee_stil.jpg" alt="la palette du gout">
+                            <span class="card__figure card__figure--new">Nouveau</span>
+                            <figcaption class="card__caption">
+                                <div class="card__caption--title">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
+                                <div class="card__heart">
+                                    <i class="card__heart__item  far fa-heart"></i>
+                                    <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
 
-                <a href="./menus/la_note_enchantee.html" class="card__menu">
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/la_note_enchantee_stil.jpg" alt="la palette du gout">
-                        <span class="card__figure card__figure--new">Nouveau</span>
-                        <figcaption class="card__caption">
-                            <div class="card__caption--title">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                            </div>
-                            <div class="card__heart">
-                                <i class="card__heart__item  far fa-heart"></i>
-                                <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
+                    <a href="./menus/a_la_francaise.html" class="card__menu">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="la palette du gout">
+                            <figcaption class="card__caption">
+                                <div class="card__caption--title">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <div class="card__heart">
+                                    <i class="card__heart__item  far fa-heart"></i>
+                                    <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
 
-                <a href="./menus/a_la_francaise.html" class="card__menu">
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/a_la_francaise_toa-heftiba.jpg" alt="la palette du gout">
-                        <figcaption class="card__caption">
-                            <div class="card__caption--title">
-                                <h3>A la française</h3>
-                                <p>Cité Rouge</p>
-                            </div>
-                            <div class="card__heart">
-                                <i class="card__heart__item  far fa-heart"></i>
-                                <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="./menus/le_delice_des_sens.html" class="card__menu">
-                    <figure class="card__figure">
-                        <img src="./assets/pictures/le_delice_des_sens_louis-hansel.jpg" alt="la palette du gout">
-                        <figcaption class="card__caption">
-                            <div class="card__caption--title">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                            </div>
-                            <div class="card__heart">
-                                <i class="card__heart__item  far fa-heart"></i>
-                                <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </section>
-
+                    <a href="./menus/le_delice_des_sens.html" class="card__menu">
+                        <figure class="card__figure">
+                            <img src="./assets/pictures/le_delice_des_sens_louis-hansel.jpg" alt="la palette du gout">
+                            <figcaption class="card__caption">
+                                <div class="card__caption--title">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="card__heart">
+                                    <i class="card__heart__item  far fa-heart"></i>
+                                    <i class="card__heart__item  card__heart__item--filled fas fa-heart"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </section>
+            
         </main>
         <!--  FOOTER  -->
 

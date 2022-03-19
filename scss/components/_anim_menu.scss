@@ -1,0 +1,37 @@
+@keyframes slide-item {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes checkout {
+    
+    
+}
+
+.starterItem {
+    &__choice{
+    cursor: pointer;
+    animation: slide-item 1.3s .3s ease-in-out both;
+  position: relative;
+  overflow: hidden;
+  transform-origin: right;
+  transition: all 1s ease-in-out
+
+}}
+.starterItem__Checkout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: $tertiary-color;
+    transform: rotate(0turn);
+    transition: all 1s ease-out;
+}

@@ -4,21 +4,21 @@
   &__info {
     height: 60px;
     max-width: 250px;
-    justify-content: center;
+    align-self: center;
     box-shadow: 0px 5px 8px #cccccc;
     background: $gradient-light;
     z-index: 0;
     font-weight: 400;
     border: 0;
     color: white;
+    white-space: nowrap;
     overflow: hidden;
     box-shadow: 5px 5px 5px rgba($color: hsl(317, 68%, 71%), $alpha: 1.4);
 
     &:hover {
-      box-shadow: 5px 5px 5px rgba($color: rgb(214, 203, 212), $alpha: 1.2);
-
+      box-shadow: 0px 5px 5px rgba($color: rgb(214, 203, 212), $alpha: 1.2);
       &:after {
-        opacity: 0.3;
+        opacity: 0.2;
       }
     }
 
@@ -26,20 +26,21 @@
     border-radius: 30px;
     margin: 35px 0px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
     padding: 15px;
   }
 }
 
 //***** SECTION STEPS *******************
 
-.btn-list {
+.btn-list__item {
   display: flex;
   align-items: center;
-  border: none;
   border-radius: 20px;
-  box-shadow: 0px 5px 8px #e6e6e6;
-  padding: 20px 0px 20px 0px;
+  box-shadow: 0px 6px 20px #e6e6e6;
+  height: 80px;
   margin-bottom: 25px;
+  background-color: $info-color;
 
   &:hover {
     background-color: $btn-list-hover;
@@ -47,10 +48,11 @@
     cursor: pointer;
   }
 
+
   @include tablet-portrait {
     display: flex;
-    flex-flow: column;
-    align-items: stretch;
+    flex-flow: row;
+    align-items: center;
     width: 100%;
   }
 
@@ -58,39 +60,41 @@
     width: 100%;
   }
 
-  &__item--number {
+  &__button--number {
     border: none;
     color: white;
-    height: 25px;
-    width: 25px;
+    height: 21px;
+    width: 21px;
     border-radius: 15px;
     background-color: $primary-color;
     position: relative;
     left: -10px;
     padding-top: 2px;
+    text-align: center;
 
     @include tablet-portrait {
-      height: 30px;
-      width: 30px;
-      font-size: 1.3rem;
-      bottom: -16px;
-      left: -13px;
+      height: 19px;
+      width: 19px;
+      font-size: 0.8rem;
+      left: -9px;
     }
   }
 
-  &__item--icon {
+  &__button--icon {
     padding-left: 15px;
     font-size: 1.2rem;
     color: $dark-light-color;
-
-    i.fa {
-      font-size: 0.8rem;
-    }
   }
 
-  &__item--text {
+  &__button--text {
     font-size: 1rem;
     font-weight: 600;
     margin-left: 20px;
+  }
+
+  &__button--textOne {
+    margin-left: 23px;
+    font-size: 16px;
+    font-weight: 600;
   }
 }

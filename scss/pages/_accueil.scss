@@ -5,7 +5,10 @@
         background-color: $search-dark;
         height: 3.2rem;
         box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.3);
-
+        i {
+            font-size: 1.2rem;
+         padding-bottom: 2px;
+        }
         @include tablet-landscape-up {
             width: 100%;
             align-items: center;
@@ -21,16 +24,20 @@ input {
     height: 2rem;
     font-weight: 500;
     font-size: 1.2rem;
-    padding-left: 10px;
+  
 }
 
 .info {
-    @include flex-center-al-it;
+    display: flex;
     flex-direction: column;
     text-align: center;
     background-color: $info-color;
     font-size: 1.2rem;
     padding: 25px 15px;
+    width: 100%;
+    @include big-desktop {
+        justify-content: space-around;
+    }
 
     &__resa {
         padding-left: 40px;
@@ -47,7 +54,7 @@ input {
 }
 
 .steps {
-    padding: 25px;
+    padding: 20px;
 
     @include tablet-portrait {
         width: 100%;
@@ -55,26 +62,38 @@ input {
     }
 }
 
+.info-steps {
+    display: flex;
+    flex-direction: row;
+
+    @include phone-only {
+        flex-direction: column;
+    }
+}
+
 .ohmyfood-desktop {
     @include tablet-landscape-up {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
         gap: 10px;
     }
+
+    @include desktop-up {
+        flex-wrap: wrap;  
+    }
+  
 }
 
 .card {
     @include tablet-landscape-up {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: wrap;
         width: 100%;
-        gap: 10px;
-        justify-content: space-evenly;
-
-        &__title {
-            display: none;
+        justify-content: center;
+        gap: 6px;
+        @include big-desktop {
+            gap: 25px;
         }
     }
 }
