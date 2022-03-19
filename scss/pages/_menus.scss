@@ -120,18 +120,30 @@
     }
 
     &__icon {
-        display: none;
         width: 0%;
         background-color: $tertiary-color;
+        transition-property: width;
+        transition-duration: 2s;
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
         
+        i {
+            transform: rotate(45deg);
+            transition: 0.3s;
+            margin-top: 38px;
+        }
     }
 }
 
 .starter-item:hover {
     .starter-item__icon {
-        display: block;
         width: 20%;
-        transition: width 0.2s ease-in-out;
+
+        i {
+            transform: rotate(360deg);
+            transition: 0.3s;
+        }
     }
 }
 

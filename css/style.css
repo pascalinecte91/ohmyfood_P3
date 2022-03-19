@@ -755,15 +755,26 @@ input {
   align-self: flex-end;
 }
 .starter-item__icon {
-  display: none;
   width: 0%;
   background-color: #99E2D0;
+  transition-property: width;
+  transition-duration: 2s;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+}
+.starter-item__icon i {
+  transform: rotate(45deg);
+  transition: 0.3s;
+  margin-top: 38px;
 }
 
 .starter-item:hover .starter-item__icon {
-  display: block;
   width: 20%;
-  transition: width 0.2s ease-in-out;
+}
+.starter-item:hover .starter-item__icon i {
+  transform: rotate(360deg);
+  transition: 0.3s;
 }
 
 /* .starterItem__subtitle,
