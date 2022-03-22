@@ -3,139 +3,148 @@
 *****************/
 
 .logo {
-    @include flex-jus-center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
+  @include flex-jus-center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
 
-    h1 {
-        padding-left: 20px;
-        font-family: $font-title;
-        font-size: 2rem;
+  h1 {
+    padding-left: 20px;
+    font-family: $font-title;
+    font-size: 2rem;
 
-        @include tablet-portrait {
-            font-size: 2.5;
-        }
+    @include tablet-portrait {
+      font-size: 2.5rem;
     }
+  }
 
-    /**********    arrow left ******/
-    a {
-        position: absolute;
-        left: 1rem;
-        font-size: 1.1rem;
-        top: 45px;
-        color: black;
+  /**********   fleche retour en haut à gauche ******/
+  a {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.1rem;
+    top: 34px;
+    @include tablet-portrait {
+      top: 46px;
     }
+    color: black;
+  
+  }
 
-    &__text {
-        font-size: 2.2rem;
-        color: black;
+  /******************************/
+  &__text {
+    font-size: 2.2rem;
+    color: black;
 
-        @include phone-only {
-            font-size: 1.4rem;
-        }
+    @include phone-only {
+      font-size: 1.4rem;
     }
+  }
 }
 
-
-
 .card__heart__item {
-    &--menu {
-        top: 46px;
-        right: 41px;
-        @include desktop-up {
-            top:60px;
-            right: 25px;
-        }
-        @include big-desktop {
-            top:60px;
-            right: 100px;
-        }
-    }
-  
-    // heart rempli
-
-    &--menu-filled {
-        opacity: 0;
-        transition: opacity 1s;
-        background: $gradient-light;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        right: 41px;
-        top: 46px;
-        @include desktop-up {
-            top:60px;
-            right: 25px;
-        }
-        @include big-desktop {
-            top:60px;
-            right: 100px;
-        }
- 
-        &:hover {
-            opacity: 1;
-        }
+  &--menu {
+    top: 27px;
+    right: 41px;
+    @include phone-only {
+      top: 27px;
+      right: 32px;
     }
 
+    @include desktop-up {
+      top: 42px;
+      right: 25px;
+    }
+
+    @include big-desktop {
+      top: 50px;
+      right: 70px;
+    }
+  }
+
+  // heart rempli
+
+  &--menu-filled {
+    opacity: 0;
+    transition: opacity 1s;
+    background: $gradient-btn;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    right: 41px;
+    top: 27px;
+    @include phone-only {
+      top: 27px;
+      right: 32px;
+    }
+
+    @include desktop-up {
+      top: 42px;
+      right: 25px;
+    }
+
+    @include big-desktop {
+      top: 50px;
+      right: 70px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 /****************
       PICTURE
 *****************/
 .menu__picture img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 
-    @include tablet-portrait {
-        height: 450px;
-    }
+  @include tablet-portrait {
+    height: 450px;
+  }
 
-    @include phone-only {
-        height: 300px;
-    }
+  @include phone-only {
+    height: 300px;
+  }
 
-    @include tablet-landscape-up {
-        height: 500px;
-        object-position: 100% 20%;
+  @include tablet-landscape-up {
+    height: 500px;
+    object-position: 100% 20%;
+  }
+
+  @include desktop-up {
+    object-position: 100% 55%;
+  }
+}
+
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+  position: relative;
+  background-color: $info-color;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -80px;
+
+  @include tablet-landscape-up {
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -80px;
+    gap: 10px;
+
+    span {
+      font-size: 1rem;
     }
 
     @include desktop-up {
-        height: 500px;
-        object-position: 100% 55%;
+      margin-left: inherit;
+      margin-right: inherit;
     }
-}
-
-
-.mainMenu {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    position: relative;
-    background-color: $info-color;
-    border-radius: 40px;
-    margin-top: -80px;
-    padding: 20px;
-
-    @include tablet-landscape-up {
-        justify-content: space-around;
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-top: -80px;
-        gap: 10px;
-
-        span {
-            font-size: 1rem;
-        }
-
-        @include desktop-up {
-            margin-left: inherit;
-            margin-right: inherit;
-        }
-
-    }
+  }
 }
 
 /****************
@@ -143,321 +152,415 @@
 *****************/
 
 .wrapper {
-    display: flex;
-    flex-flow: column;
-    font-weight: 400;
+  display: flex;
+  flex-flow: column;
+  font-weight: 400;
 
-    span {
-        font-size: 1.1rem;
-    }
+  span {
+    font-size: 0.9rem;
+  }
 
-    @include desktop-up {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  @include desktop-up {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
-
 
 //  ENTREES
 
-.starter__subtitle {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
+.starter__title {
+  font-family: $font-title;
+  padding-left: 15px;
 
-
-    &::after {
-        content: "";
-        padding-bottom: 0.5rem;
-        width: 2.5rem;
-        border-bottom: $tertiary-color 3px solid;
-    }
+  @include desktop-up {
+    text-align: center;
+    font-size: 2.2rem;
+  }
 }
 
-.starter__title {
-    font-family: $font-title;
+.starters {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-    @include desktop-up {
-        text-align: center;
-        font-size: 2.2rem;
-    }
+.starter__subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  // pour aligner les 3 sections en desktop
+  margin-top: 15px;
+
+  //  bande souligné titre green
+  &::after {
+    content: "";
+    padding-bottom: 0.5rem;
+    width: 2.5rem;
+    border-bottom: $tertiary-color 3px solid;
+  }
 }
 
 .starter-item {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  @include box-sh-menu;
+  margin-bottom: 15px;
 
-    p:last-child {
-        font-size: 1rem;
-        padding: 10px;
-        width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+  &__detail {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 1rem;
+    padding: 10px 5px 0px 10px;
+    margin: 0px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include phone-only {
+      max-width: 200px;
     }
-
-    h4:first-child {
-        font-size: 1.1rem;
-        padding: 10px 5px 0px 10px;
-        margin: 0px;
-        max-width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    @include tablet-portrait {
+      text-overflow: inherit;
     }
-
-    &__detail {
-        flex-grow: 1;
+    @include desktop-up {
+      text-overflow: inherit;
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
+  }
 
-    &__price {
-        width: 10%;
-        align-self: end;
-        padding-bottom: 10px;
-        font-weight: bold;
-        margin-right: 20px;
+  &__content {
+    font-size: 0.9rem;
+    padding: 12px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include phone-only {
+      max-width: 200px;
     }
-
-    &__icon {
-        width: 0%;
-        background-color: $tertiary-color;
-        border-radius: 0px 20px 20px 0px;
-        transition-property: width;
-        transition-duration: 1.3s;
-        border-radius: 0px 20px 20px 0px;
-        overflow: hidden;
-        text-align: center;
-        justify-content: center;
-
-        // fontawesome  centré
-        i {
-            transform: rotate(-360deg);
-            transition: 0.3s;
-            margin-top: 28px;
-            color: white;
-            @include desktop-up {
-                width: 60px;
-            }
-        }
-       
+    @include tablet-portrait {
+      text-overflow: inherit;
     }
+    @include desktop-up {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__price {
+    width: 10%;
+    align-self: end;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    @include phone-small {
+      font-size: 0.2rem;
+    }
+  }
+
+  &__icon {
+    width: 0%;
+    background-color: $tertiary-color;
+    @include br-menus-icon;
+    //design la propriete ou l'effet doit être appliqué
+    transition-property: width;
+    transition-duration: 1.3s;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+
+    // fontawesome  centré
+    i {
+      transform: rotate(-360deg);
+      transition: 0.3s;
+      margin-top: 28px;
+      color: white;
+
+      @include desktop-up {
+        width: 60px;
+      }
+    }
+  }
 }
 
-// largeur  deplié vert
+// largeur  deplié choix
 
 .starter-item:hover {
-    .starter-item__icon {
-        width: 20%;
+  .starter-item__icon {
+    width: 20%;
 
-        i {
-            transform: rotate(360deg);
-            transition: 0.3s;
-            color: white;
-            border-radius: 0px 20px 20px 0px;
-        }
+    i {
+      transform: rotate(360deg);
+      transition: 0.3s;
+      color: white;
+      border-radius: 0px 20px 20px 0px;
     }
+  }
 }
 
 //   PLATS
 
-.dish__subtitle {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    margin-top: 20px;
+.dishes {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-    &::after {
-        content: "";
-        padding-bottom: 0.5rem;
-        width: 2.5rem;
-        border-bottom: $tertiary-color 3px solid;
-    }
+.dish__subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  margin-top: 15px;
+
+  //  bande souligné titre green
+  &::after {
+    content: "";
+    padding-bottom: 0.5rem;
+    width: 2.5rem;
+    border-bottom: $tertiary-color 3px solid;
+  }
 }
 
 .dish-item {
-   display: flex;
-   flex-direction: row;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  @include box-sh-menu;
+  margin-bottom: 15px;
 
-    p:last-child {
-        font-size: 1rem;
-        padding: 10px;
-        width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+  &__detail {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 1rem;
+    padding: 10px 5px 0px 10px;
+    margin: 0px;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include phone-only {
+      max-width: 200px;
     }
-
-    h4:first-child {
-        font-size: 1.1rem;
-        padding: 10px 5px 0px 10px;
-        margin: 0px;
-        max-width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    @include tablet-portrait {
+      text-overflow: inherit;
     }
-
-    &__detail {
-        flex-grow: 1;
+    @include desktop-up {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
+  }
 
-    &__price {
-        width: 10%;
-        align-self: end;
-        padding-bottom: 10px;
-        font-weight: bold;
-        margin-right: 20px;
+  &__content {
+    font-size: 0.9rem;
+    padding: 12px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include phone-only {
+      max-width: 200px;
     }
-
-    &__icon {
-        width: 0%;
-        background-color: $tertiary-color;
-        border-radius: 0px 20px 20px 0px;
-        transition-property: width;
-        transition-duration: 1.3s;
-        overflow: hidden;
-        text-align: center;
-        justify-content: center;
-
-        i {
-            transform: rotate(-360deg);
-            transition: 0.3s;
-            margin-top: 28px;
-            color: white;
-            @include desktop-up {
-                width: 60px;
-            }
-        }
+    @include tablet-portrait {
+      text-overflow: inherit;
     }
+  }
+  &__price {
+    width: 10%;
+    align-self: end;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    @include phone-small {
+      font-size: 0.2rem;
+    }
+  }
+
+  &__icon {
+    width: 0%;
+    background-color: $tertiary-color;
+    @include br-menus-icon;
+    transition-property: width;
+    transition-duration: 1.3s;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    // fontawesome  centré
+    i {
+      transform: rotate(-360deg);
+      transition: 0.3s;
+      margin-top: 28px;
+      color: white;
+
+      @include desktop-up {
+        width: 60px;
+      }
+    }
+  }
 }
-
+//slide
 .dish-item:hover {
-    .dish-item__icon {
-        width: 20%;
+  .dish-item__icon {
+    width: 20%;
 
-        i {
-            transform: rotate(360deg);
-            transition: 0.3s;
-            color: white;
-        }
+    i {
+      transform: rotate(360deg);
+      transition: 0.3s;
+      color: white;
+      border-radius: 0px 20px 20px 0px;
     }
+  }
 }
 
-//DESSERTS 
+//DESSERTS
+
+.desserts {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .dessert__subtitle {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  margin-top: 15px;
 
-    &::after {
-        content: "";
-        padding-bottom: 0.5rem;
-        width: 2.5rem;
-        border-bottom: $tertiary-color 3px solid;
-    }
+  &::after {
+    content: "";
+    padding-bottom: 0.5rem;
+    width: 2.5rem;
+    border-bottom: $tertiary-color 3px solid;
+  }
 }
 
 .dessert-item {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  @include box-sh-menu;
+  margin-bottom: 15px;
 
-    p:last-child {
-        font-size: 1rem;
-        padding: 10px;
-        width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+  &__detail {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 1rem;
+    padding: 10px 5px 0px 10px;
+    margin: 0px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include phone-only {
+      max-width: 200px;
     }
-
-    h4:first-child {
-        font-size: 1.1rem;
-        padding: 10px 5px 0px 10px;
-        margin: 0px;
-        max-width: 250px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    @include tablet-portrait {
+      text-overflow: inherit;
     }
-
-    &__detail {
-        flex-grow: 1;
+    @include desktop-up {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
+  }
 
-    &__price {
-        width: 10%;
-        align-self: end;
-        padding-bottom: 10px;
-        font-weight: bold;
-        margin-right: 20px;
+  &__content {
+    font-size: 0.9rem;
+    padding: 12px;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include phone-only {
+      max-width: 200px;
     }
-
-    &__icon {
-        width: 0%;
-        background-color: $tertiary-color;
-        border-radius: 0px 20px 20px 0px;
-        transition-property: width;
-        transition-duration: 1.3s;
-        overflow: hidden;
-        text-align: center;
-        justify-content: center;
-
-        i {
-            transform: rotate(-360deg);
-            transition: 0.3s;
-            margin-top: 28px;
-            color: white;
-            @include desktop-up {
-                width: 60px;
-            }
-        }
-
+    @include tablet-portrait {
+      text-overflow: inherit;
+      max-width: 280px;
     }
+    @include desktop-up {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &__price {
+    width: 10%;
+    align-self: end;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    width: 0%;
+    background-color: $tertiary-color;
+    @include br-menus-icon;
+    transition-property: width;
+    transition-duration: 1.3s;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+
+    i {
+      transform: rotate(-360deg);
+      transition: 0.3s;
+      margin-top: 28px;
+      color: white;
+
+      @include desktop-up {
+        width: 60px;
+      }
+    }
+  }
 }
 
 .dessert-item:hover {
-    .dessert-item__icon {
-        width: 20%;
-        //fonteawesome
-        i {
-            transform: rotate(360deg);
-            transition: 0.3s;
-            color: white;
-        }
-    }
-}
+  .dessert-item__icon {
+    width: 20%;
 
+    //fonteawesome
+    i {
+      transform: rotate(360deg);
+      transition: 0.3s;
+      color: white;
+    }
+  }
+}
 // ORDER  BUTTON
-.info {
-    &--order {
-        width: 190px;
-        height: 55px;
-        align-self: center;
-    }
-}
-
 .order {
-    align-self: center;
+  display: flex;
+  justify-content: center;
 }

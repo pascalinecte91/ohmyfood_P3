@@ -1,36 +1,37 @@
 @mixin phone-small {
-    @media (max-width: 400px) {
-        @content;
-    }
+  @media (max-width: 400px) {
+    @content;
+  }
 }
+
 @mixin phone-only {
-    @media (max-width: 599.98px) {
-        @content;
-    }
+  @media (max-width: 599.98px) {
+    @content;
+  }
 }
 
 @mixin tablet-portrait {
-    @media (min-width: 600px) {
-        @content;
-    }
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 
- @mixin tablet-landscape-up {
-    @media (min-width: 767.98px) {
-        @content;
-    }
-} 
+@mixin tablet-landscape-up {
+  @media (min-width: 767.98px) {
+    @content;
+  }
+}
 
 @mixin desktop-up {
-    @media (min-width: 1023.99px) {
-        @content;
-    }
+  @media (min-width: 1023.99px) {
+    @content;
+  }
 }
 
 @mixin big-desktop {
-    @media (min-width: 1200px) {
-        @content;
-    }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 
 /* FOR USE MIXINS : example :  @include phone-only 

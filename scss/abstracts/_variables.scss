@@ -1,18 +1,20 @@
 // colors
 
 $primary-color: #9356dc;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+$secondary-color: #ff79da;
+$secondary-color-lighten: lighten($secondary-color, 5%);
+$primary-color-lighten: lighten($primary-color, 5%);
+$tertiary-color: #99e2d0;
 $white-color: #ffffff;
 $dark-light-color: #7e7e7e;
 $black-footer: #353535;
-$info-color: #F6F6F6;
-$search-dark: #EAEAEA;
-$tag-font-color:#158A69;
-$btn-list-hover:#F5EDFE;
+$info-color: #f6f6f6;
+$search-dark: #eaeaea;
+$tag-font-color: #158a69;
+$btn-list-hover: #f5edfe;
 
-$gradient-light:linear-gradient(to top, #9356dc, #ff79da);
-
-$gradient-light-light:linear-gradient(to top,  #f7bfe7, #e4dce1);
-
-$gradient-dark: linear-gradient(to top,$tag-font-color, $tertiary-color );
+$gradient-btn: linear-gradient(to top, #ff79da, #9356dc);
+$gradient-btn-light: linear-gradient(to top,$secondary-color-lighten,$primary-color-lighten);
+//hover btn 1/2/3
+$gradient-light-light: linear-gradient(#9356dc, #f3aad7);
+$gradient-dark: linear-gradient(to top, $tag-font-color, $tertiary-color);

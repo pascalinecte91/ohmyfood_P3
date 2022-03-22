@@ -1,43 +1,42 @@
 .footer {
-    background-color: $black-footer;
-    font-family: $font-title;
-    color: $white-color;
+  background-color: $black-footer;
+  font-family: $font-title;
+  color: $white-color;
+  color: white;
+  line-height: 27px;
+  @include padding-footer;
+
+  @include tablet-portrait {
+    &__title,
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
     color: white;
-    line-height: 27px;
-    @include padding-footer;
+  }
 
-    @include tablet-portrait {
+  a {
+    color: white;
+  }
 
-        &__title,
-        &__list {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-    }
+  p {
+    font-family: $font-title;
+  }
 
-    &__title {
-        font-size: 1.1rem;
-        color: white;
-    }
+  ul > li {
+    font-size: 14px;
+  }
 
-    a {
-        color: white;
-    }
+  &__list--ustensil {
+    padding-right: 17px;
+  }
 
-    p {
-        font-family: $font-title;
-    }
-
-    ul>li {
-        font-size: 14px;
-    }
-
-    &__list--ustensil {
-        padding-right: 17px;
-    }
-
-    &__list--helping {
-        padding-right: 10px;
-    }
+  &__list--helping {
+    padding-right: 10px;
+  }
 }

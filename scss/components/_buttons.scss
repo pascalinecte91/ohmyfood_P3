@@ -1,13 +1,12 @@
 //**** SECTION INFO *********************
-  //  button explorer
+//  button explorer - commander
 
 .btn {
   &__info {
     height: 60px;
     max-width: 250px;
     justify-content: center;
-    background: $gradient-light;
-    z-index: 0;
+    background: $gradient-btn;
     font-weight: 400;
     border: none;
     color: white;
@@ -15,17 +14,20 @@
     border-radius: 30px;
     font-size: 1.2rem;
     margin: 35px 0px;
+    color: #ffffff;
     cursor: pointer;
-    padding: 15px;
-      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-      &:hover {
-        box-shadow: 0 0 40px 40px $secondary-color inset;
-      }
-    
-  }
-   
-  }
+    padding: 20px;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 3px 3px 5px $secondary-color-lighten;
 
+    // eclaircissement et shadow accentué
+    &:hover {
+      background: $gradient-btn-light;
+      box-shadow: 3px 7px 8px $primary-color-lighten;
+    }
+  }
+}
 
 //***** SECTION STEPS *******************
 
@@ -33,23 +35,30 @@
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 20px;
-  box-shadow: 0px 5px 8px #e6e6e6;
+  border-radius: 27px;
+  box-shadow: 2px 5px 8px #e6e6e6;
   padding: 20px 0px 20px 0px;
   margin-bottom: 25px;
-  height: 88px;
+  height: 78px;
 
+  //color hover de tout le bouton
   &:hover {
     background-color: $btn-list-hover;
     position: relative;
     cursor: pointer;
-  }
 
-  @include tablet-portrait {
-    width: 100%;
+    i {
+      color: $primary-color;
+      position: relative;
+      cursor: pointer;
+    }
   }
 
   @include phone-only {
+    width: 100%;
+  }
+
+  @include tablet-portrait {
     width: 100%;
   }
 
@@ -74,12 +83,6 @@
     padding-left: 15px;
     font-size: 1.2rem;
     color: $dark-light-color;
-
-    &:hover {
-      color: $primary-color;
-      position: relative;
-      cursor: pointer;
-    }
 
     i.fa {
       font-size: 0.8rem;

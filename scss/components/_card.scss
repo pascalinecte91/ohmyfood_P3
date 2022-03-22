@@ -6,11 +6,11 @@
   padding-bottom: 60px;
 
   a {
-    @include box-shCardA;
+    @include box-sh-card-a;
   }
 
   &__title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-align: left;
 
     @include tablet-portrait {
@@ -63,16 +63,15 @@
 
     &__item {
       position: absolute;
-      background-color: $gradient-light-light;
       transition: opacity 1s;
-      top: 20px;
+      top: 17px;
       right: 23px;
       font-size: 1.7rem;
 
       &--filled {
         opacity: 0;
         transition: opacity 1s;
-        background: $gradient-light;
+        background: $gradient-btn;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -87,8 +86,7 @@
 }
 
 .card__figure--new {
-  display: flex;
-  justify-content: center;
+  @include flex-jus-center;
   line-height: 2.2rem;
   font-size: 1rem;
   color: $tag-font-color;
@@ -99,8 +97,8 @@
   min-width: 100px;
   max-width: 35%;
   top: 14px;
-  right: 20px;
-  background: lighten($tertiary-color, 10);
+  right: 17px;
+  background: $tertiary-color;
   font-weight: bold;
 
   &:hover {

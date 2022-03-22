@@ -1,45 +1,42 @@
-.starters {
+// MENU GLOBAL
+.wrapper {
   animation: fadeIn linear 3s;
-  transition-delay: 0;
+  transition-delay: 1ms;
   -webkit-animation: fadeIn linear 3s;
   -moz-animation: fadeIn linear 3s;
 }
 
-.dishes {
-  animation: fadeIn linear 3s;
-  transition-delay: 1;
-  -webkit-animation: fadeIn linear 3s;
-  -moz-animation: fadeIn linear 3s;
-}
+// APPARITION PROGRESSIVE
 
-.desserts {
-  animation: fadeIn linear 3s;
-  transition-delay: 2;
-  -webkit-animation: fadeIn linear 3s;
-  -moz-animation: fadeIn linear 3s;
-}
-
-
-
-// APPARITION PROGRESSIVE 
-
+//
 @keyframes fadeIn {
-  0% {opacity:0;
+  0% {
+    opacity: 0;
     transform: translateY(50px);
   }
-  100% { opacity: 1;
-  transform: translateY(0px);
-}
- 
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
