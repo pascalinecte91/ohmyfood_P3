@@ -24,11 +24,12 @@
     left: 1rem;
     font-size: 1.1rem;
     top: 34px;
+
     @include tablet-portrait {
       top: 46px;
     }
+
     color: black;
-  
   }
 
   /******************************/
@@ -46,6 +47,7 @@
   &--menu {
     top: 27px;
     right: 41px;
+
     @include phone-only {
       top: 27px;
       right: 32px;
@@ -73,6 +75,7 @@
     color: transparent;
     right: 41px;
     top: 27px;
+
     @include phone-only {
       top: 27px;
       right: 32px;
@@ -131,25 +134,13 @@
 
   @include tablet-landscape-up {
     justify-content: space-around;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: -80px;
-    gap: 10px;
 
     span {
       font-size: 1rem;
-    }
-
-    @include desktop-up {
-      margin-left: inherit;
-      margin-right: inherit;
+      margin:5px;
     }
   }
 }
-
-/****************
-    menu
-*****************/
 
 .wrapper {
   display: flex;
@@ -164,11 +155,8 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
   }
 }
-
-//  ENTREES
 
 .starter__title {
   font-family: $font-title;
@@ -180,385 +168,117 @@
   }
 }
 
-.starters {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+/******************************************
+    menu   STARTERS - DISHES - DESSERTS
+*******************************************/
 
-.starter__subtitle {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 400;
+.card-menu {
   display: flex;
   flex-direction: column;
-  font-weight: 400;
-  // pour aligner les 3 sections en desktop
-  margin-top: 15px;
+  flex: 1;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  //  bande souligné titre green
-  &::after {
-    content: "";
-    padding-bottom: 0.5rem;
-    width: 2.5rem;
-    border-bottom: $tertiary-color 3px solid;
-  }
-}
-
-.starter-item {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 20px;
-  @include box-sh-menu;
-  margin-bottom: 15px;
-
-  &__detail {
-    flex-grow: 1;
-  }
-
-  &__title {
+  &__subtitle {
+    text-transform: uppercase;
     font-size: 1rem;
-    padding: 10px 5px 0px 10px;
-    margin: 0px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    // pour aligner les 3 sections en desktop
+    margin-top: 15px;
 
-    @include phone-only {
-      max-width: 200px;
+    //  bande souligné titre green
+    &::after {
+      content: "";
+      padding-bottom: 0.5rem;
+      width: 2.5rem;
+      border-bottom: $tertiary-color 3px solid;
     }
-    @include tablet-portrait {
-      text-overflow: inherit;
-    }
-    @include desktop-up {
-      text-overflow: inherit;
-      max-width: 220px;
+  }
+
+  &__item {
+    display: flex;
+  
+    flex-direction: row;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+    @include box-sh-menu;
+    margin-bottom: 15px;
+
+    &__detail {
+      flex-grow: 1;
+      width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-  }
 
-  &__content {
-    font-size: 0.9rem;
-    padding: 12px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    @include phone-only {
-      max-width: 200px;
+    &__title {
+      font-size: 1rem;
+      padding: 10px 5px 0px 10px;
+      margin: 0px;
     }
-    @include tablet-portrait {
-      text-overflow: inherit;
-    }
-    @include desktop-up {
-      max-width: 220px;
+
+    &__content {
+      font-size: 0.9rem;
+      padding: 12px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      max-height: 200px;
+      width: 80%;
     }
-  }
 
-  &__price {
-    width: 10%;
-    align-self: end;
-    padding-bottom: 10px;
-    font-weight: bold;
-    margin-right: 10px;
-    @include phone-small {
-      font-size: 0.2rem;
+    &__price {
+      align-self: end;
+      padding-bottom: 10px;
+      font-weight: bold;
+      margin-right: 5px;
+
+      @include phone-small {
+        font-size: 0.2rem;
+      }
     }
-  }
 
-  &__icon {
-    width: 0%;
-    background-color: $tertiary-color;
-    @include br-menus-icon;
-    //design la propriete ou l'effet doit être appliqué
-    transition-property: width;
-    transition-duration: 1.3s;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
+    &__icon {
+      width: 0%;
+      background-color: $tertiary-color;
+      @include br-menus-icon;
+      //designe la propriete ou l'effet doit être appliqué
 
-    // fontawesome  centré
-    i {
-      transform: rotate(-360deg);
-      transition: 0.3s;
-      margin-top: 28px;
-      color: white;
+      transition: 1s;
+      text-align: center;
+      justify-content: center;
 
-      @include desktop-up {
-        width: 60px;
+      i {
+        transform: rotate(-360deg);
+        transition: 1s;
+        margin-top: 28px;
+        color: white;
+        border-radius: 0px 20px 20px 0px;
       }
     }
   }
 }
 
-// largeur  deplié choix
-
-.starter-item:hover {
-  .starter-item__icon {
+.card-menu__item:hover {
+  .card-menu__item__icon {
     width: 20%;
+    background-color: $tertiary-color;
 
     i {
       transform: rotate(360deg);
-      transition: 0.3s;
-      color: white;
-      border-radius: 0px 20px 20px 0px;
-    }
-  }
-}
-
-//   PLATS
-
-.dishes {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.dish__subtitle {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  margin-top: 15px;
-
-  //  bande souligné titre green
-  &::after {
-    content: "";
-    padding-bottom: 0.5rem;
-    width: 2.5rem;
-    border-bottom: $tertiary-color 3px solid;
-  }
-}
-
-.dish-item {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 20px;
-  @include box-sh-menu;
-  margin-bottom: 15px;
-
-  &__detail {
-    flex-grow: 1;
-  }
-
-  &__title {
-    font-size: 1rem;
-    padding: 10px 5px 0px 10px;
-    margin: 0px;
-    max-width: 260px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    @include phone-only {
-      max-width: 200px;
-    }
-    @include tablet-portrait {
-      text-overflow: inherit;
-    }
-    @include desktop-up {
-      max-width: 220px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  &__content {
-    font-size: 0.9rem;
-    padding: 12px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    @include phone-only {
-      max-width: 200px;
-    }
-    @include tablet-portrait {
-      text-overflow: inherit;
-    }
-  }
-  &__price {
-    width: 10%;
-    align-self: end;
-    padding-bottom: 10px;
-    font-weight: bold;
-    margin-right: 10px;
-    @include phone-small {
-      font-size: 0.2rem;
-    }
-  }
-
-  &__icon {
-    width: 0%;
-    background-color: $tertiary-color;
-    @include br-menus-icon;
-    transition-property: width;
-    transition-duration: 1.3s;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
-    // fontawesome  centré
-    i {
-      transform: rotate(-360deg);
-      transition: 0.3s;
-      margin-top: 28px;
-      color: white;
 
       @include desktop-up {
-        width: 60px;
-      }
-    }
-  }
-}
-//slide
-.dish-item:hover {
-  .dish-item__icon {
-    width: 20%;
-
-    i {
-      transform: rotate(360deg);
-      transition: 0.3s;
-      color: white;
-      border-radius: 0px 20px 20px 0px;
-    }
-  }
-}
-
-//DESSERTS
-
-.desserts {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.dessert__subtitle {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  margin-top: 15px;
-
-  &::after {
-    content: "";
-    padding-bottom: 0.5rem;
-    width: 2.5rem;
-    border-bottom: $tertiary-color 3px solid;
-  }
-}
-
-.dessert-item {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 20px;
-  @include box-sh-menu;
-  margin-bottom: 15px;
-
-  &__detail {
-    flex-grow: 1;
-  }
-
-  &__title {
-    font-size: 1rem;
-    padding: 10px 5px 0px 10px;
-    margin: 0px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    @include phone-only {
-      max-width: 200px;
-    }
-    @include tablet-portrait {
-      text-overflow: inherit;
-    }
-    @include desktop-up {
-      max-width: 220px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  &__content {
-    font-size: 0.9rem;
-    padding: 12px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    @include phone-only {
-      max-width: 200px;
-    }
-    @include tablet-portrait {
-      text-overflow: inherit;
-      max-width: 280px;
-    }
-    @include desktop-up {
-      max-width: 220px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-  &__price {
-    width: 10%;
-    align-self: end;
-    padding-bottom: 10px;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  &__icon {
-    width: 0%;
-    background-color: $tertiary-color;
-    @include br-menus-icon;
-    transition-property: width;
-    transition-duration: 1.3s;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
-
-    i {
-      transform: rotate(-360deg);
-      transition: 0.3s;
-      margin-top: 28px;
-      color: white;
-
-      @include desktop-up {
-        width: 60px;
       }
     }
   }
 }
 
-.dessert-item:hover {
-  .dessert-item__icon {
-    width: 20%;
-
-    //fonteawesome
-    i {
-      transform: rotate(360deg);
-      transition: 0.3s;
-      color: white;
-    }
-  }
-}
 // ORDER  BUTTON
 .order {
   display: flex;
